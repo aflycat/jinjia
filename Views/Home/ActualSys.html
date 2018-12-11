@@ -1,0 +1,39 @@
+﻿<div class="ribbon">
+    <button class="btn btns-style-3" title="刷新" data-action="refreshAgain"><i class="iconfont icon-shuaxin"></i></button><span>当前页 / </span><span id="ribbonNow" style="color:#FFD600">实时快照</span>
+</div>
+
+<div class="contents">
+    <div class="contentHeader">
+        <span><i class="iconfont icon-kuaizhao"></i> 实时快照</span>
+    </div>
+
+    <div class="contentBody">
+        <div class="contentBodyInAn Slide-in-topSlow">
+            <div class="inforbtnList">
+                <button id="btnSnapshot_1" class="btn btns-style-5" data-action="inforbtn" sw="true"><img src="/Image/infor/Fatal.png"><span>故障</span><b class="badge">0</b></button>
+                <button id="btnSnapshot_2" class="btn btns-style-5" data-action="inforbtn" sw="true"><img src="/Image/infor/Warn.png"><span>警告</span><b class="badge">0</b></button>
+                <button id="btnSnapshot_3" class="btn btns-style-5" data-action="inforbtn" sw="true"><img src="/Image/infor/Info.png"><span>信息</span><b class="badge">0</b></button>
+                <button id="btnSnapshot_4" class="btn btns-style-5" data-action="inforbtn" sw="true"><img src="/Image/infor/SetParm.png"><span>设置</span><b class="badge">0</b></button>
+                <button id="btnSnapshot_5" class="btn btns-style-5" data-action="inforbtn" sw="true"><img src="/Image/infor/ZiChan.png"><span>资产</span><b class="badge">0</b></button>
+            </div>
+
+            <div class="actualbody">
+                <div class="tableAuto">
+                    <table id="tableAct">
+                        <thead>
+                            <tr>
+                                <th>类型</th>
+                                <th>时间</th>
+                                <th>事件</th>
+                                <th>确认</th>
+                                <th>处理意见</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/Scripts/home/ActualSys.js"></script>

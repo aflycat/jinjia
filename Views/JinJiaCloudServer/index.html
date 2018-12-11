@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>数据中心云平台</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<div class="main">
+			<!-- 今日资源状态 -->
+			<div class="modular floatl">
+				<p class="model-title">今日资源状态</p>
+				<div class="present-Resource">
+					<ul>
+						<li>云主机</li>
+						<li>新增<span id="instanceAddId">0</span><font>个</font></li>
+						<li>释放<span id="instanceDeletelId">0</span><font>个</font></li>
+					</ul>
+					<ul>
+						<li>云硬盘</li>
+						<li>新增<span id="volumeAddId">0</span><font>G</font></li>
+						<li>释放<span id="volumeDeletelId">0</span><font>G</font></li>
+					</ul>
+					<ul>
+						<li>私&nbsp;&nbsp;&nbsp;网</li>
+						<li>新增<span id="networkAddId">0</span><font>个</font></li>
+						<li>释放<span id="networkDeletelId">0</span><font>个</font></li>
+					</ul>
+					<ul>
+						<li>路由器</li>
+						<li>新增<span id="routerAddId">0</span><font>个</font></li>
+						<li>释放<span id="routerDeletelId">0</span><font>个</font></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- 图表数据 -->
+			<div class="resource-chart floatr">
+				<div class="speci-container">
+					<p class="model-title">CPU</p>
+					<div class="specifications">
+						<div class="pie-charts pie-charts-desc">
+							<div class="pie-desc-content">
+								共<span id="cpuTotalId">000</span>核
+							</div>
+						</div>
+						<div class="pie-charts border0" id="cpuRateCharts"></div>
+						<div class="speci-desc">
+							<p>已使用<span id="cpuUseId">000</span>核</p>
+							<p>未使用<span id="cpuUnUseId">000</span>核</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="speci-container">
+					<p class="model-title">内存</p>
+					<div class="specifications">
+						<div class="pie-charts pie-charts-desc">
+							<div class="pie-desc-content">
+								共<span id="memoryTotalId">000</span>T
+							</div>
+						</div>
+						<div class="pie-charts" id="memoryRateCharts"></div>
+						<div class="speci-desc">
+							<p>已使用<span id="memoryUseId">000</span>T</p>
+							<p>未使用<span id="memoryUnUseId">000</span>T</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="speci-container">
+					<p class="model-title">存储</p>
+					<div class="specifications">
+						<div class="pie-charts pie-charts-desc">
+							<div class="pie-desc-content">
+								共<span id="storageTotalId">000</span>T
+							</div>
+						</div>
+						<div class="pie-charts" id="storageRateCharts"></div>
+						<div class="speci-desc">
+							<p>已使用<span id="storageUseId">000</span>T</p>
+							<p>未使用<span id="storageUnUseId">000</span>T</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- 操作日志 -->
+			<div class="operator floatl width-per40">
+				<p class="model-title">操作日志</p>
+				<div class="operator-box" id="operatorBoxId">
+					<ul class="operator-log" id="operatorLogId">
+						<li class="operator-log-light">
+							<div class="content-list">
+								<div class="content-list-left">
+									<div class="list-header">0000-00-00 00:00:00</div>
+									<div class='list-desc'>创建云主机 云主机</div>
+								</div>
+								<div class="content-list-right">
+									<div class="list-user">admin</div>
+									<div class="list-result color-success">成功</div>
+								</div>
+							</div>
+						</li>
+						<li class="operator-log-dark">
+							<div class="content-list">
+								<div class="content-list-left">
+									<div class="list-header">0000-00-00 00:00:00</div>
+									<div class='list-desc'>创建云主机 云主机</div>
+								</div>
+								<div class="content-list-right">
+									<div class="list-user">admin</div>
+									<div class="list-result color-success">成功</div>
+								</div>
+							</div>
+						</li>
+						<li class="operator-log-dark">
+							<div class="content-list">
+								<div class="content-list-left">
+									<div class="list-header">0000-00-00 00:00:00</div>
+									<div class='list-desc'>创建云主机 云主机</div>
+								</div>
+								<div class="content-list-right">
+									<div class="list-user">admin</div>
+									<div class="list-result color-success">成功</div>
+								</div>
+							</div>
+						</li>
+						<li class="operator-log-dark">
+							<div class="content-list">
+								<div class="content-list-left">
+									<div class="list-header">0000-00-00 00:00:00</div>
+									<div class='list-desc'>创建云主机 云主机</div>
+								</div>
+								<div class="content-list-right">
+									<div class="list-user">admin</div>
+									<div class="list-result color-success">成功</div>
+								</div>
+							</div>
+						</li>
+						<li class="operator-log-dark">
+							<div class="content-list">
+								<div class="content-list-left">
+									<div class="list-header">0000-00-00 00:00:00</div>
+									<div class='list-desc'>创建云主机 云主机</div>
+								</div>
+								<div class="content-list-right">
+									<div class="list-user">admin</div>
+									<div class="list-result color-success">成功</div>
+								</div>
+							</div>
+						</li>
+						<li class="operator-log-dark">
+							<div class="content-list">
+								<div class="content-list-left">
+									<div class="list-header">0000-00-00 00:00:00</div>
+									<div class='list-desc'>创建云主机 云主机</div>
+								</div>
+								<div class="content-list-right">
+									<div class="list-user">admin</div>
+									<div class="list-result color-success">成功</div>
+								</div>
+							</div>
+						</li>
+						<li class="operator-log-dark">
+							<div class="content-list">
+								<div class="content-list-left">
+									<div class="list-header">0000-00-00 00:00:00</div>
+									<div class='list-desc'>创建云主机 云主机</div>
+								</div>
+								<div class="content-list-right">
+									<div class="list-user">admin</div>
+									<div class="list-result color-success">成功</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<!-- 网络流量 -->
+			<div class="network-flux floatr">
+				<div class="real-time-flow">
+					<div class="real-flux" id="realFluxCharts"></div>
+				</div>
+
+			</div>
+		</div>
+		<script src="js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts-liquidfill.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

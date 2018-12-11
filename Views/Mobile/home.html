@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>AlarmCenter | 首页</title>
+    <!--框架样式-->
+    <link rel="stylesheet" href="/Scripts/plug/1.5.0/framework7.ios.min.css">
+    <link rel="stylesheet" href="/Scripts/plug/1.5.0/framework7.ios.colors.min.css">
+    <!--图标字体样式-->
+    <link rel="stylesheet" type="text/css" href="/fonts/iconfont.css" />
+    <!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_547753_zasresk3k01i3sor.css"> -->
+    <!--声波动画-->
+    <link rel="stylesheet" type="text/css" href="/Styles/Plugin/waveAnimation.css" />
+    <!--本页样式-->
+    <link rel="stylesheet" href="/Styles/Mobile/home.css">
+    <link rel="stylesheet" type="text/css" href="/Styles/Mobile/iconfont.css"/>
+
+    
+    
+</head>
+<style type="text/css">
+    
+</style>
+<body>
+	
+    <!-- 状态栏覆盖为全屏模式 -->
+    <!--<div class="statusbar-overlay"></div>-->
+    <!-- 面板覆盖-->
+    <div class="panel-overlay"></div>
+    <!-- 左侧边栏-->
+    <div id="leftPanel" class="panel panel-left layout-dark panel-cover">
+        <div class="list-block list-page">
+            <ul> 
+                <li>
+                    <a href="#" class="item-link" onclick="doAndLink(1006,1)">
+                        <div class="item-content">
+                            <div class="item-media"><i class="iconfont icon-icon-"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">打开体感</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item-link" onclick="doAndLink(1006,2)">
+                        <div class="item-content">
+                            <div class="item-media"><i class="iconfont icon-guanbi"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">停止体感</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>               
+                <li id="appCacheClearLi" >
+                    <a href="#" class="item-link" onclick="onAppCacheClear()">
+                        <div class="item-content">
+                            <div class="item-media"><i class="iconfont icon-huancun"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">清空缓存</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item-link" onclick="onUserLogout()">
+                        <div class="item-content">
+                            <div class="item-media"><i class="iconfont icon-logout"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">注销</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 右侧边栏-->
+
+    <!-- 视图 -->
+    <div class="views">
+        <div class="view view-main">
+            <!-- 顶部导航条-->
+            <div class="navbar" id="homeBar">
+                <div class="navbar-inner">
+                    <!-- 标题 -->
+                     <div class="left">
+                        <a href="#" class="link icon-only open-panel"><i class="iconfont icon-caidan"></i></a>
+                    </div>
+                    <div class="center sliding">劲嘉集团</div> 
+                    <div class="right">
+                    	
+                    </div>
+                </div>
+            </div>
+            <!-- 子界面-->
+            <style type="text/css">
+            	
+            </style>
+            <div class="pages navbar-through toolbar-through">
+                <div data-page="home" class="page navbar-fixed" id="home">
+                	<div class="page-content" id="jinJia">
+                		<div style="height:5%;"></div>
+                			<div class="row no-gutter">
+                				<div  class="col-10"></div>
+                				<div class="btnTouch goOpen" style="width: 1.8rem;height: 1.8rem;" eq_no="300"  set_no="1" >
+                					<p></p>
+		                    		<i class="icon iconfont icon-shouye" style="font-size: 0.7rem !important;"></i>
+		                    		<p class="name">首页</p>
+		                    	</div>
+		                    	<div class="btnTouch goOpen"  style="width: 1.8rem;height: 1.8rem;" eq_no="300"  set_no="71">
+		                    		<p></p>
+		                    		<i class="icon iconfont icon-erjicaidan"  style="font-size: 0.7rem !important;"></i>
+		                    		<p class="name">总体架构</p>
+		                    	</div>
+		                    	
+	                			<div  class="col-10"></div>
+                			</div>
+                			<div style="height:0.8rem;"></div>
+                			<div class="row no-gutter">
+                				<div class="col-5"></div>
+                				<div class="btnTouch">
+                					<p></p>
+		                    		<i class="icon iconfont icon-yunpingtai" style="font-size: 0.7rem !important;"></i>
+		                    		<p class="name"  style="margin-top: -0.6em;">数据中心</p>
+		                    		<div class="menu">
+		                    			<ul>
+                                            <li><a class="lef link " href="MovingRing.html"  >动环系统</a></li>
+                                            <li><a class="rig link " href="CloudPlatform.html"  >云平台</a></li>
+		                    				<!-- <li><a class="lef link " href="#"  onclick="doAndLink('300','9','MovingRing.html')">动环系统</a></li>
+		                    				<li><a class="rig link " href="#"  onclick="doAndLink('300','11','CloudPlatform.html')">云平台</a></li> -->
+		                    			</ul>
+		                    		</div>
+		                    	</div>
+		                    	<div class="likeBtnTouch" onclick="loadPage(this)">
+		                    		<p></p>
+		                    		<i  class="icon iconfont icon-chanpin  marTB"></i>
+		                    		<p  class="name" style="margin-top: 0em;" >智慧产品</p>
+		                    		
+		                    	</div>
+                				<div class="btnTouch" >
+                					<p></p>
+		                    		<i class="icon iconfont icon-yuanqu" style="font-size:0.7rem !important;"></i>
+		                    		<p class="name" style="margin-top: -0.6em;">智慧园区</p>
+		                    		<div class="menu ">
+		                    			<ul class="">
+                                            <li><a class="lef link " href="ManageEnergy.html" >能源管理</a></li>
+                                            <li><a class="rig link " href="videoMonitor.html" >视频监控</a></li>
+		                    				<!-- <li><a class="lef link " href="#" onclick="doAndLink('300','13','ManageEnergy.html')">能源管理</a></li>
+		                    				
+		                    				<li><a class="rig link " href="videoMonitor.html" >视频监控</a></li> -->
+		                    			</ul>
+		                    		</div>
+		                    	</div>
+		                    	
+		                    	<div class="btnTouch">
+		                    		<p></p>
+		                    		<i class="icon iconfont icon-yewu  marTB" ></i>
+		                    		<p class="name">智慧业务</p>  
+		                    		<div class="menu">
+		                    			<ul>
+		                    				<li ><a class="lef link " href="#" onclick="doAndLink('300','23','')">公共数据</a></li>
+		                    				<li ><a class="rig link" href="#" onclick="doAndLink('300','24','')">内部数据</a></li>
+		                    			</ul>
+		                    		</div>
+		                    	</div>
+		                    	
+		                    	<div class="btnTouch" >	
+		                    		<p></p>
+		                    		<i class="icon iconfont icon-zhizao marTB" ></i>
+		                    		<p class="name">智慧制造</p>
+		                    		<div class="menu">
+		                    			<ul>
+                                            
+		                    				<li><a class="lef link " href="#" onclick="doAndLink('300','15','')">智慧工厂</a></li>
+		                    				<li><a class="rig link " href="productTechnology.html" >生产工艺</a></li>
+		                    			</ul>
+		                    		</div>
+		                    	</div>
+		                    	<div class="col-5"></div>
+                			</div>
+                			
+                			
+		                    
+                	</div>
+                </div>
+                <div   id="voiceSwit_ho" class="floating-button" > <!--onclick="openPup()"-->
+				    <i class="icon icon-yuyin2"></i>
+				</div>
+            </div> 
+            <div id="voiceMessage_ho" class="voiceTitle" style="display:none;position: fixed;bottom: 150px;left: 0;z-index: 999;"></div>
+			<div id="waveAnim_ho" class="waveAnim" style="display:none;position: fixed;bottom: 10px;left: 0;z-index: 999;left: 50%;margin-left: -125px;" >
+                    	<i></i><i></i><i></i><i></i><i></i>
+                    	<i></i><i></i><i></i><i></i><i></i>
+                    	<i></i><i></i><i></i><i></i><i></i>
+                    	<i></i><i></i><i></i><i></i><i></i>
+                    	<i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div id="loading" style="width: 100%;height: 100%;top: 0px;left:0;margin:0 0;background: rgba(0,0,0,0.2);z-index: 999;position: fixed;display: none;">
+	            <div class="page-content">
+	            	<div class="" style="height: 33%;"></div>
+	            	<div class="row">
+	            		<div class="col-33"></div>
+	            		<div class="col-33" style="text-align: center;">
+	            			 <span style="width:42px; height:42px" class="preloader preloader-white"></span>
+	            		</div>
+	            		<div class="col-33"></div>
+	            		
+	            	</div>
+	            	<p class="color-white" style="text-align: center;">操作执行中...</p>
+	            </div>
+			</div>
+			
+			
+			
+			
+            <!-- 底部工具栏-->
+        </div>
+    </div>
+    <!-- 框架js-->
+    <script src="/Scripts/plug/jquery-1.10.1.min.js"></script>
+    <script src="/Scripts/plug/highcharts.js"></script>
+    <script src="/Scripts/plug/echarts-all-3.js"></script>
+    <script src="/Scripts/plug/china.js"></script>
+    <script type="text/javascript" src="/Scripts/plug/1.5.0/framework7.js"></script>
+    <script type="text/javascript" src="/Scripts/plug/html2canvas.min.js"></script>
+    <!-- 首页js-->
+    <script type="text/javascript" src="/Scripts/mobile/home.js"></script>
+    <!-- 移动端入口js-->
+    <script type="text/javascript" src="/Scripts/mobile/mobileAll.js"></script>
+    <!-- 插件-->
+    <script type="text/javascript" src="/Scripts/mobile/plugin/appPopup.js"></script>
+    <!-- 二维扫描结果 -->
+    <script type="text/javascript" src="/Scripts/mobile/RichScanCallback.js"></script>
+    <!-- 定制页js-->
+    <!--<script type="text/javascript" src="LDW/js/LDWHome.js"></script>-->
+    <script type="text/javascript" src="/Scripts/mobile/rem.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+﻿<div class="ribbon">
+    <button class="btn btns-style-3" title="刷新" data-action="refreshAgain"><i class="iconfont icon-shuaxin"></i></button><span>当前页 / </span><span id="ribbonNow" style="color:#FFD600">报警排表</span>
+</div>
+
+<div class="contents">
+    <div class="contentHeader">
+        <span><i class="iconfont icon-renyuanpaiban"></i> 报警排表</span>
+    </div>
+
+    <div class="contentBody">
+        <div class="contentBodyInAn Slide-in-topSlow">
+            <div class="tabuTop">
+                <button class="btn btns-style-4" id="btn_Select" onclick="saveData()" onmousemove="goEdit()"><i class="iconfont icon-baocun"></i> 保存</button>
+                <button class="btn btns-style-4" id="btn_Delete" onclick="deleteData()" disabled="disabled" onmousemove="goEdit()"><i class="iconfont icon-shanchu"></i> 删除</button>
+                <button class="btn btns-style-4" id="btn_Add" onclick="addData()" onmousemove="goEdit()"><i class="iconfont icon-tianjia"></i> 添加</button>
+            </div>
+            <div class="clear"></div>
+            <ul class="nav-tabList tabu-nav-tab">
+                <li class="active" data-action="tabList" href="#alarmTab_1" onclick="tabClick(0)"><span>人员信息</span></li>
+                <li data-action="tabList" href="#alarmTab_2" onclick="tabClick(1)"><span>设备监控分组</span></li>
+                <li data-action="tabList" href="#alarmTab_3" onclick="tabClick(2)"><span>管理范围</span></li>
+                <li data-action="tabList" href="#alarmTab_4" onclick="tabClick(3)"><span>周排表</span></li>
+                <li data-action="tabList" href="#alarmTab_5" onclick="tabClick(4)"><span>特定日期排表</span></li>
+            </ul>
+            <div class="tab-content tabu-tab-content">
+                <article id="alarmTab_1" class="tab-pane active animated">
+                    <div class="tableAuto">
+                        <table id="alarmTab_table_1">
+                            <thead>
+                                <tr>
+                                    <th>人员姓名</th>
+                                    <th>电话</th>
+                                    <th>短信</th>
+                                    <th>电子邮件</th>
+                                    <th>报警通知级别</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article id="alarmTab_2" class="tab-pane animated">
+                    <div class="col-md-4" onmouseout="censeClick(this)">
+                        <div class="tableAuto">
+                            <table id="alarmTab_table_2">
+                                <thead>
+                                    <tr>
+                                        <th>设备分组名称</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="tableAuto tabu-table">
+                            <table id="alarmTab_table_2_2">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <span><b id="selectName" style="color:#FFD600;"></b> 所选设备</span>
+                                            <span class="tabu-control tabu-control-1" onclick="onEmptyControl()"><i class="iconfont icon-qingkong"></i> 清空</span>
+                                            <span class="tabu-control tabu-control-2" onclick="onSelectControl()"><i class="iconfont icon-quanxuan"></i> 全选</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div id="equipList" class="equipList" onmouseout="equipOut(this)"></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="alarmTab_3" class="tab-pane animated">
+                    <div class="tableAuto" onmouseout="censeClick(this)">
+                        <table id="alarmTab_table_3">
+                            <thead>
+                                <tr>
+                                    <th>人员姓名</th>
+                                    <th>设备分组名称</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article id="alarmTab_4" class="tab-pane animated">
+                    <div class="tableAuto" onmouseout="censeClick(this)">
+                        <table id="alarmTab_table_4">
+                            <thead>
+                                <tr>
+                                    <th>人员姓名</th>
+                                    <th>星期</th>
+                                    <th>起始时间</th>
+                                    <th>结束时间</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article id="alarmTab_5" class="tab-pane animated">
+                    <div class="tableAuto" onmouseout="censeClick(this)">
+                        <table id="alarmTab_table_5">
+                            <thead>
+                                <tr>
+                                    <th>人员姓名</th>
+                                    <th>起始时间</th>
+                                    <th>结束时间</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/Scripts/home/AlarmTabulate.js"></script>

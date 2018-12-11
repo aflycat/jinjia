@@ -1,0 +1,248 @@
+﻿<div class="ribbon">
+    <button class="btn btns-style-3" title="刷新" data-action="refreshAgain"><i class="iconfont icon-shuaxin"></i></button><span>当前页 / </span><span id="ribbonNow" style="color:#FFD600">系统配置</span>
+</div>
+
+<div class="contents">
+    <div class="contentHeader">
+        <span><i class="iconfont icon-xujicanshupeizhi"></i> 系统配置</span>
+    </div>
+
+    <div class="contentBody">
+        <div class="contentBodyInAn Slide-in-topSlow">
+            <div class="col-md-3 tree">
+                <div class="treeList">
+                    <ul role="tree" id="treelist">
+                        <li class="parent_li">
+                            <span>
+                                <i class="iconfont icon-jian"></i>
+                                <input type="checkbox" id="treelistAll" onclick="treelistAll(event)" />
+                                <label>所有设备</label>
+                            </span>
+                            <ul></ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="sysbtn">
+                    <button class="btn btns-style-4" id="btn_Select" style="margin-left:13px;" onclick="selectData()"><i class="iconfont icon-chaxun"></i> 查询</button>
+                    <button class="btn btns-style-4" onclick="configData()"><i class="iconfont icon-xujicanshupeizhi"></i> 配置</button>
+                </div>
+                <div class="clear"></div>
+                <ul class="nav-tabList sys-nav-tab">
+                    <li class="active" data-action="tabList" href="#eqpConf"><span>设备配置</span></li>
+                    <li data-action="tabList" href="#ycpConf"><span>模拟量配置</span></li>
+                    <li data-action="tabList" href="#yxpConf"><span>状态量配置</span></li>
+                    <li data-action="tabList" href="#SetParmConf"><span>设置配置</span></li>
+                </ul>
+                <div class="tab-content sys-tab-content">
+                    <article id="eqpConf" class="tab-pane active animated">
+                        <div class="tableAuto">
+                            <table id="Equip">
+                                <thead>
+                                    <tr id="Equiptr">
+                                        <th> 设备号</th>
+
+                                        <th> 设备名称</th>
+
+                                        <th> 关联界面</th>
+
+                                        <th> 关联视频</th>
+
+                                        <th> 资产编号</th>
+
+                                        <th> 预案号</th>
+
+                                        <th> 显示报警</th>
+
+                                        <th> 记录报警</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+
+                        <div class="tablePaging">
+                            <div class="table-btnPages">
+                                <button id="btnPages_1_1" class="btn btns-style-1" disabled="disabled" onclick="pagHome(1)"><i class="iconfont icon-shangyizhang"></i></button>
+                                <button id="btnPages_1_2" class="btn btns-style-1" disabled="disabled" onclick="pagLarclick(1)"><i class="iconfont icon-shangyiye"></i></button>
+                                <button id="btnPages_1_3" class="btn btns-style-1" disabled="disabled" onclick="pagRarclick(1)"><i class="iconfont icon-xiayiye"></i></button>
+                                <button id="btnPages_1_4" class="btn btns-style-1" disabled="disabled" onclick="pagEnd(1)"><i class="iconfont icon-xiayizhang"></i></button>
+                            </div>
+                            <div class="table-nowPage table-nowPage-first">
+                                <span>当前第<b id="nowPage_now_1"> </b>页</span>&nbsp;&nbsp;&nbsp;
+                                <span>总共<b id="nowPage_count_1"> </b>页</span>
+                            </div>
+                            <div class="table-nowPage">
+                                <span>跳转至 <input id="nowPage_goPage_1" type="text" value="1" class="input" /> 页</span>
+                                <span><button id="nowPage_goPageBtn_1" class="btn btns-style-1" onclick="nowPage_goPageBtn(1)" disabled="disabled">确定</button></span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </article>
+
+                    <article id="ycpConf" class="tab-pane animated">
+                        <div class="tableAuto">
+                            <table id="ycp">
+                                <thead>
+                                    <tr>
+                                        <th> 设备号</th>
+
+                                        <th> 模拟量编号</th>
+
+                                        <th> 模拟量名称</th>
+
+                                        <th> 下限值</th>
+
+                                        <th> 回复下限值</th>
+
+                                        <th> 回复上限值</th>
+
+                                        <th> 上限值</th>
+
+                                        <th> 单位</th>
+
+                                        <th> 关联页面</th>
+
+                                        <th> 关联视频</th>
+
+                                        <th> 资产编号</th>
+
+                                        <th> 预案号</th>
+
+                                        <th> 曲线记录</th>
+
+                                        <th> 显示报警</th>
+
+                                        <th> 记录报警</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+
+                        <div class="tablePaging">
+                            <div class="table-btnPages">
+                                <button id="btnPages_2_1" class="btn btns-style-1" disabled="disabled" onclick="pagHome(2)"><i class="iconfont icon-shangyizhang"></i></button>
+                                <button id="btnPages_2_2" class="btn btns-style-1" disabled="disabled" onclick="pagLarclick(2)"><i class="iconfont icon-shangyiye"></i></button>
+                                <button id="btnPages_2_3" class="btn btns-style-1" disabled="disabled" onclick="pagRarclick(2)"><i class="iconfont icon-xiayiye"></i></button>
+                                <button id="btnPages_2_4" class="btn btns-style-1" disabled="disabled" onclick="pagEnd(2)"><i class="iconfont icon-xiayizhang"></i></button>
+                            </div>
+                            <div class="table-nowPage table-nowPage-first">
+                                <span>当前第<b id="nowPage_now_2"> </b>页</span>&nbsp;&nbsp;&nbsp;
+                                <span>总共<b id="nowPage_count_2"> </b>页</span>
+                            </div>
+                            <div class="table-nowPage">
+                                <span>跳转至 <input id="nowPage_goPage_2" type="text" value="1" class="input" /> 页</span>
+                                <span><button id="nowPage_goPageBtn_2" class="btn btns-style-1" onclick="nowPage_goPageBtn(2)" disabled="disabled">确定</button></span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </article>
+
+                    <article id="yxpConf" class="tab-pane animated">
+                        <div class="tableAuto">
+                            <table id="yxp">
+                                <thead>
+                                    <tr>
+                                        <th> 设备号</th>
+
+                                        <th> 状态量编号</th>
+
+                                        <th> 状态量名称</th>
+
+                                        <th> 0-1事件</th>
+
+                                        <th> 1-0事件</th>
+
+                                        <th> 关联页面</th>
+
+                                        <th> 关联视频</th>
+
+                                        <th> 资产编号</th>
+
+                                        <th> 预案号</th>
+
+                                        <th> 显示报警</th>
+
+                                        <th> 记录报警</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+
+                        <div class="tablePaging">
+                            <div class="table-btnPages">
+                                <button id="btnPages_3_1" class="btn btns-style-1" disabled="disabled" onclick="pagHome(3)"><i class="iconfont icon-shangyizhang"></i></button>
+                                <button id="btnPages_3_2" class="btn btns-style-1" disabled="disabled" onclick="pagLarclick(3)"><i class="iconfont icon-shangyiye"></i></button>
+                                <button id="btnPages_3_3" class="btn btns-style-1" disabled="disabled" onclick="pagRarclick(3)"><i class="iconfont icon-xiayiye"></i></button>
+                                <button id="btnPages_3_4" class="btn btns-style-1" disabled="disabled" onclick="pagEnd(3)"><i class="iconfont icon-xiayizhang"></i></button>
+                            </div>
+                            <div class="table-nowPage table-nowPage-first">
+                                <span>当前第<b id="nowPage_now_3"> </b>页</span>&nbsp;&nbsp;&nbsp;
+                                <span>总共<b id="nowPage_count_3"> </b>页</span>
+                            </div>
+                            <div class="table-nowPage">
+                                <span>跳转至 <input id="nowPage_goPage_3" type="text" value="1" class="input" /> 页</span>
+                                <span><button id="nowPage_goPageBtn_3" class="btn btns-style-1" onclick="nowPage_goPageBtn(3)" disabled="disabled">确定</button></span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </article>
+
+                    <article id="SetParmConf" class="tab-pane animated">
+                        <div class="tableAuto">
+                            <table id="SetParm">
+                                <thead>
+                                    <tr>
+                                        <th> 设备号</th>
+
+                                        <th> 设置号</th>
+
+                                        <th> 设置名称</th>
+
+                                        <th> 设置类型</th>
+
+                                        <th> 操作命令</th>
+
+                                        <th> 操作参数</th>
+
+                                        <th> 记录</th>
+
+                                        <th> 动作</th>
+
+                                        <th> 值</th>
+
+                                        <th> 是否可以执行</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+
+                        <div class="tablePaging">
+                            <div class="table-btnPages">
+                                <button id="btnPages_4_1" class="btn btns-style-1" disabled="disabled" onclick="pagHome(4)"><i class="iconfont icon-shangyizhang"></i></button>
+                                <button id="btnPages_4_2" class="btn btns-style-1" disabled="disabled" onclick="pagLarclick(4)"><i class="iconfont icon-shangyiye"></i></button>
+                                <button id="btnPages_4_3" class="btn btns-style-1" disabled="disabled" onclick="pagRarclick(4)"><i class="iconfont icon-xiayiye"></i></button>
+                                <button id="btnPages_4_4" class="btn btns-style-1" disabled="disabled" onclick="pagEnd(4)"><i class="iconfont icon-xiayizhang"></i></button>
+                            </div>
+                            <div class="table-nowPage table-nowPage-first">
+                                <span>当前第<b id="nowPage_now_4"> </b>页</span>&nbsp;&nbsp;&nbsp;
+                                <span>总共<b id="nowPage_count_4"> </b>页</span>
+                            </div>
+                            <div class="table-nowPage">
+                                <span>跳转至 <input id="nowPage_goPage_4" type="text" value="1" class="input" /> 页</span>
+                                <span><button id="nowPage_goPageBtn_4" class="btn btns-style-1" onclick="nowPage_goPageBtn(4)" disabled="disabled">确定</button></span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/Scripts/home/Systems.js"></script>

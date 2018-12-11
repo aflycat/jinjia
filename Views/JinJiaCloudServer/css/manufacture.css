@@ -1,0 +1,97 @@
+@font-face {
+	font-family: Digital-7 Mono;
+	src: url(../fonts/DIGITAL REGULAR.TTF);
+}
+
+@font-face {
+	font-family: 'zhsrxt';
+	src: url(../fonts/zhsrxt2.0.ttf);
+}
+
+@font-face {
+	font-family: 'PingFang ExtraLight';
+	src: url(../fonts/PingFang ExtraLight.ttf);
+}
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+	font-size: 30px;
+	background: url(../img/produce/square.png) no-repeat center center/100% 100%;
+	/*background: transparent;*/
+}
+
+.main {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	font-family: 'PingFang ExtraLight';
+}
+
+.manufacture-plan{
+	width: 86%;
+	margin: auto;
+	height: 33%;
+	position: relative;
+	top: 3%;
+}
+
+.manufacture-plan .manufacture-plan-title{
+	font-size: 1.5rem;
+	height: 14%;
+	color: #fff;
+	font-family: 'zhsrxt';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.plan-title-one{
+	background: #0AAABA;
+}
+
+.plan-title-two{
+	background: #2F72B6;
+}
+
+.manufacture-plan .manufacture-plan-chart{
+	width: 100%;
+	height: 86%;
+}
+
+.manufacture-progress{
+	width: 86%;
+	margin: auto;
+	height: 25%;
+	position: relative;
+	top: 8%;
+	background: url(../img/produce/dash_frame.png) no-repeat;
+	background-position: center bottom;
+	background-size: 104% 100%; 
+}
+
+.manufacture-progress p{
+	font-size: 1.6rem;
+	text-align: center;
+	height: 15%;
+	color: #fff;
+	font-family: 'zhsrxt';
+	text-align: center;
+	position: relative;
+	top: -6%;
+}
+
+.manufacture-progress-chart{
+	width: 33%;
+	height: 80%;
+	float: left;
+}
+
+.manufacture-progress-chart:first-child{
+	margin-right: 1%;
+}
+
+.manufacture-progress-chart:last-child{
+	margin-left: 1%;
+}

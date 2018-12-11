@@ -1,0 +1,5 @@
+1.打开运行输入 cmd
+
+2.输入 cd C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+3.输入 aspnet_regiis.exe -i

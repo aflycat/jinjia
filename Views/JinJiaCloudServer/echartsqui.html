@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				background: url(img/background.png) no-repeat center center/100% 100%;
+			}
+			
+			#main {
+				padding: 20px;
+			}
+			
+			#main:after {
+				display: block;
+				content: ' ';
+				clear: both;
+			}
+			
+			h1 {
+				margin: 20px;
+				font-size: 20px;
+				font-weight: bold;
+				text-align: center;
+				color: #D94854;
+			}
+			
+			.chart {
+				width: 25%;
+				height: 300px;
+				float: left;
+			}
+			
+			@media (max-width: 980px) {
+				.chart {
+					height: 200px;
+				}
+			}
+			
+			@media (max-width: 750px) {
+				.chart {
+					width: 33.333333%;
+				}
+			}
+			
+			@media (max-width: 500px) {
+				.chart {
+					width: 50%;
+					height: 180px;
+				}
+			}
+			
+			.main-chart {
+				width: 100%;
+				height: 600px;
+				float: none;
+				margin: 50px 0;
+			}
+			
+			.nav {
+				text-align: center;
+				margin: 10px;
+			}
+			
+			a {
+				text-decoration: none;
+				background-color: #294D99;
+				transition: 0.5s;
+				color: white;
+				padding: 6px 18px;
+				border-radius: 20px;
+				margin: 0 4px;
+			}
+			
+			a:hover {
+				background-color: #1598ED;
+			}
+			
+			#view-more {
+				text-align: center;
+				margin: 20px 0 80px 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id='main'>
+			<div class="chart main-chart" id="liquidfill-chart"></div>
+
+		</div>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts-liquidfill.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var chart = echarts.init(document.getElementById('liquidfill-chart'));
+			var option = {
+				series: [{
+					name: '指标',
+					type: 'gauge',
+					max: 100,
+					startAngle: 360, //总的360，设置180就是半圆
+					endAngle: 0.0001,
+					radius: '97%',
+					//					['#c23531','#2f4554', '#61a0a8', '#d48265', '#91c7ae','#749f83',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3']
+
+					center: ['50%', '50%'], //整体的位置设置
+					splitNumber: 10,
+					axisLine: {
+						show: false,
+						lineStyle: {
+							width: 0,
+							opacity: 0,
+							color: [
+								[0.1, '#99778E'],
+								[0.2, '#B89C9B'],
+								[0.3, '#C7C490'],
+								[0.4, '#88A7A7'],
+								[0.5, '#67A4C9'],
+								[0.6, '#85ABB2'],
+								[0.7, '#C2C890'],
+								[0.8, '#A7A199'],
+								[0.9, '#AE949A'],
+								[1, '#AF7E98']
+							]
+						}
+					},
+					axisTick: {
+						splitNumber: 5,
+						length: 15,
+						lineStyle: {
+							color: 'auto',
+							width: 2,
+						}
+					},
+					splitLine: {
+						show: false
+					},
+					axisLabel: {
+						show: false
+					},
+					pointer: {
+						show: false
+					},
+					detail: {
+						show: false
+					},
+					data: [{
+						value: '',
+					}]
+				}, {
+					name: '指标',
+					type: 'gauge',
+					max: 100,
+					startAngle: 360, //总的360，设置180就是半圆
+					endAngle: 0.0001,
+					radius: '100%',
+					center: ['50%', '50%'], //整体的位置设置
+					splitNumber: 10,
+					axisLine: {
+						show: false,
+						lineStyle: {
+							width: 0,
+							opacity: 0
+							//							color:'rgba(255,255,255,0)'
+						}
+					},
+					axisTick: {
+						show: false
+					},
+					splitLine: {
+						length: 24,
+						lineStyle: {
+							color: '#568DAC',
+							width: 2,
+						}
+					},
+					axisLabel: {
+						show: false
+					},
+					pointer: {
+						show: false
+					},
+					detail: {
+						show: false
+					},
+					data: [{
+						value: 0,
+					}]
+				}, {
+					type: 'liquidFill',
+					color: ['#F5E315', '#1A9C87'],
+					center: ['50%', '50%'],
+					radius: '80%',
+					amplitude: '8%',
+					waveLength: '80%',
+					phase: 'auto',
+					period: 'auto',
+					direction: 'right',
+					shape: 'circle',
+
+					waveAnimation: true,
+					animationEasing: 'linear',
+					animationEasingUpdate: 'linear',
+					animationDuration: 2000,
+					animationDurationUpdate: 1000,
+
+					label: {
+						position: ['50%', '50%'],
+						formatter: function() {
+							return '{gray|223}{green|V}';
+						},
+						
+						rich: {
+				            gray: {
+				                fontSize: 128,
+								color: '#F5E315',
+								insideColor: '#F5E315',
+				            },
+				            green: {
+				                fontSize: 128,
+				                padding:[5,5,5,25],
+								color: '#F5E315',
+								insideColor: '#F5E315',
+				            }
+				        }
+					},
+					outline: {
+						show: true,
+						borderDistance: 8,
+
+						itemStyle: {
+							color: 'none',
+							borderColor: '#294D99',
+							borderWidth: 0,
+							shadowBlur: 20,
+							shadowColor: 'rgba(255, 0, 0, 0.25)'
+						}
+					},
+					backgroundStyle: {
+						color: 'rgba(224, 246, 255,0)'
+					},
+					itemStyle: {
+						opacity: 0.95,
+						shadowBlur: 50,
+						shadowColor: 'rgba(0, 0, 0, 0.4)',
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(245, 227, 21, 0.7)'
+						}, {
+							offset: 0.1,
+							color: 'rgba(26, 156, 135, 0.9)'
+						}, {
+							offset: 0.9,
+							color: 'rgba(26, 156, 135, 0.9)'
+						}], false)
+					},
+					data: [0.3, 0.25]
+				}]
+			};
+			chart.setOption(option);
+		</script>
+	</body>
+
+</html>

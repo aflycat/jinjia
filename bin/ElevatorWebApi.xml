@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ElevatorWebApi</name>
+    </assembly>
+    <members>
+        <member name="M:ElevatorWebApi.Controllers.JinJiaApiController.GetUseInfo">
+            <summary>
+            获取CPU、内存和存储的使用情况数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.JinJiaApiController.GetResourceInfo">
+            <summary>
+            获取当日资源新增、删除数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.JinJiaApiController.GetResourceTrend">
+            <summary>
+            获取资源使用率趋势数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.JinJiaApiController.StorageTrend">
+            <summary>
+            存储逻辑池指标趋势
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.JinJiaApiController.StorageAlarmInfo">
+            <summary>
+            获取物理存储池故障、告警信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.JinJiaApiController.OperateLog">
+            <summary>
+            获取操作日志列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.JinJiaApiController.NetworkTrafficOut(System.String,System.String)">
+            <summary>
+            网络Out
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ElevatorWebApi.Controllers.JinJiaApiController.NetworkTrafficIn(System.String,System.String)">
+            <summary>
+            网络In
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

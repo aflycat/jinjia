@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>数据中心云平台</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_545610_unke9y3ln7wlv7vi.css"/>
+		<link rel="stylesheet" type="text/css" href="css/produce.css" />
+		
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="half-content valign-content floatl">
+				<!-- 生产计划看板1 -->
+				<div class="product-plan">
+					<table border="0" cellspacing="0" cellpadding="0" id="planTableId">
+						<tr>
+							<th colspan="3" class="bg-color-greenlight">生产计划看板</th>
+						</tr>
+						<tr>
+							<td width="25%" class="table-header-font">产品名称</th>
+								<td width="22%">
+									<div class="table-content">
+										<div class="table-content-header"></div>
+										<ul class="table-content-time">
+										</ul>
+									</div>
+								</td>
+								<td width="53%">
+									<div class="table-content">
+										<div class="table-content-header"></div>
+										<ul class="table-content-list">
+										</ul>
+									</div>
+								</td>
+						</tr>
+						<tr>
+							<td>中华香烟1</td>
+							<td><span class="produce-plan-design"></span></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>vivo手机盒1</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>vivo手机盒2</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>xx包装盒1</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>xx包装盒2</td>
+							<td></td>
+							<td></td>
+						</tr>
+
+					</table>
+				</div>
+				<!-- 生产计划看板2 -->
+				<div class="product-plan" style="margin-top: 4%;">
+					<table border="0" cellspacing="0" cellpadding="0" id="planTableId2">
+						<tr>
+							<th colspan="3" class="bg-color-bluelight">生产计划看板</th>
+						</tr>
+						<tr>
+							<td width="25%" class="table-header-font">产品名称</th>
+								<td width="22%">
+									<div class="table-content">
+										<div class="table-content-header"></div>
+										<ul class="table-content-time">
+										</ul>
+									</div>
+								</td>
+								<td width="53%">
+									<div class="table-content">
+										<div class="table-content-header"></div>
+										<ul class="table-content-list">
+										</ul>
+									</div>
+								</td>
+						</tr>
+						<tr>
+							<td>中华香烟1</td>
+							<td><span class="produce-plan-design"></span></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>vivo手机盒1</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>vivo手机盒2</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>xx包装盒1</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>xx包装盒2</td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				<!-- 生产进度 -->
+				<div class="produce-progress">
+					<p>生产进度</p>
+					<div class="produce-chart" id="dsahChartId1"></div>
+					<div class="produce-chart" id="dsahChartId2"></div>
+					<div class="produce-chart" id="dsahChartId3"></div>
+				</div>
+			</div>
+			<div class="half-content-bg floatr">
+				<p class="content-title"><i class="icon iconfont icon-web-triangle-left"></i>设备状态<i class="icon iconfont icon-web-triangle-right"></i></p>
+				<div class="content-chart">
+					<p><font>2018-01-24用电情况 </font><span>截至到16点整</span></p>
+					<div class="content-chart-type" id="duiZhuChartId"></div>
+				</div>
+				<div class="content-chart margin-per3">
+					<p><font>各产线故障率统计图</font></p>
+					<div class="content-chart-type" id="zheAreaChartId"></div>
+				</div>
+				<div class="content-anvimate margin-per2">
+					<p><font>设备说明</font></p>
+					<div class="content-desc floatl">
+						<div class="content-circle-rotate animationBefore"></div>
+						<div class="content-circle-huan-rotate animationAfter"></div>
+					</div>
+					<div class="content-rectangle floatr">
+						<div class="content-rectangle-box">
+							<div class="rectangle-desc">
+								<p class="rectangle-desc-header">
+									<label>HEIDELBERG</label>
+									<span></span>
+								</p>
+								<ul class="rectangle-ul">
+									<li>产品名称：CD102-6+L</li>
+									<li>生产批号：XB000650</li>
+									<li>生产年份：2016</li>
+									<li>产品编号：5695220</li>
+								</ul>
+								<ul class="rectangle-ul">
+									<li>海德堡制造</li>
+									<li>海德堡印刷设备（上海）有限公司</li>
+									<li>上海市青浦区崧泽大道9928号</li>
+									<li>青浦工业园区，201700</li>
+								</ul>
+								<p>
+									<label class="bg-color-darksky"></label>
+								</p>
+								<p>
+									<label class="bg-color-darkblue"></label>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/produce.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

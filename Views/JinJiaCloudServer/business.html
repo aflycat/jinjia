@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>智慧业务-合集</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_545610_unke9y3ln7wlv7vi.css" />
+		<link rel="stylesheet" type="text/css" href="css/business.css" />
+	</head>
+
+	<body>
+		<div class="main">
+			<!-- 采购 -->
+			<div class="purchase">
+				<!-- 采购 -->
+				<p class="content-title">
+					<i class="icon iconfont icon-web-triangle-left"></i> 采购
+					<i class="icon iconfont icon-web-triangle-right"></i>
+				</p>
+				<!-- 各材料用量占比情况 -->
+				<div class="consumption-rate" id="consumptionRateId"></div>
+				<!-- 各材料2017年采购金额统计图 -->
+				<div class="amount-statistics" id="amountStatisticsId"></div>
+				<!-- 采购成本降低率 -->
+				<div class="cost-reduction-rate" id="costReductionRateId"></div>
+				<div class="material-consumption">
+					<p class="header-title">采购材料用量排行榜</p>
+					<table cellpadding="0" cellspacing="0" border="1" id="consumptionTableId">
+						<tr>
+							<th>排名</th>
+							<th>材料</th>
+							<th>总用量（吨）</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>单铜纸</td>
+							<td>3339</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>金卡纸</td>
+							<td>3034</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>银卡纸</td>
+							<td>2969</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>牛皮纸</td>
+							<td>2780</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>双铜纸</td>
+							<td>2590</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>坑纸</td>
+							<td>2107</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>特种纸</td>
+							<td>1890</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>纸板</td>
+							<td>1682</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!-- 人事 -->
+			<div class="personnel">
+				<!-- 人事 -->
+				<p class="content-title" style="height: 8%;">
+					<i class="icon iconfont icon-web-triangle-left" s></i> 人事
+					<i class="icon iconfont icon-web-triangle-right"></i>
+				</p>
+				<!-- 人事地图 -->
+				<div class="personnel-map" id="personnelMapId"></div>
+				<!-- 集团人数逐年统计图 -->
+				<div class="personal-num-chart" id="personalNumId"></div>
+				<!-- 集团及区域人才逐年统计图 -->
+				<div class="personal-num-chart" id="talentStructureId"></div>
+				<!-- 集团总人数 -->
+				<div class="group-personal-num">
+					<p class="personal-all-num-desc">
+					集团总人数
+					</p>
+					<div class="personal-all-num">
+						<span>6</span><label>,</label><span>2</span><span>8</span><span>9</span><font>人</font>
+					</div>
+					<p class="senior-executive">
+					高管人数
+					</p>
+					<div class="senior-executive-num">
+						<span>2</span><span>9</span><span>6</span><font>人</font>
+					</div>
+				</div>
+			</div>
+			<!-- 库存 -->
+			<div class="stock">
+				<div class="stock-left-charts">
+					<!-- 现存量统计 -->
+					<div class="left-huan-charts" id="extantQuantityId"></div>
+					<!-- 零配件统计 -->
+					<div class="left-huan-charts" id="sparePartsId">
+						
+					</div>
+				</div>
+				<div class="stock-right-charts">
+					<!-- 库存 -->
+					<p class="content-title" style="height: 22%;justify-content: flex-start;margin-left: 7%;">
+						<i class="icon iconfont icon-web-triangle-left"></i> 库存
+						<i class="icon iconfont icon-web-triangle-right"></i>
+					</p>
+					<!-- 收发存统计 -->
+					<div class="stock-zhu-charts" id="stockZhuId"></div>
+				</div>
+			</div>
+			<!-- 产能 -->
+			<div class="capacity">
+				<!-- 产能 -->
+				<p class="content-title" style="height: 22%;">
+					<i class="icon iconfont icon-web-triangle-left"></i> 产能
+					<i class="icon iconfont icon-web-triangle-right"></i>
+				</p>
+				<!-- 产能柱状图 -->
+				<div class="capacity-duidie" id="capacityChartsId"></div>
+			</div>
+		</div>
+		<script src="js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+		<script src="js/business.js" type="text/javascript" charset="utf-8"></script>
+	
+	</body>
+
+</html>

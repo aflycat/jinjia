@@ -1,0 +1,198 @@
+﻿.waveAnim {
+    position: relative;
+    width: 150px;
+    margin: 0 auto;
+    height:120px;
+    margin-bottom:50px;
+}
+
+    .waveAnim i {
+        height: 2px;
+        width: 2px;
+        background:#40494F;
+        display: block;
+        -webkit-animation: waveAnimKey 2s infinite ease-in-out;
+        -moz-animation: waveAnimKey 2s infinite ease-in-out;
+        -ms-animation: waveAnimKey 2s infinite ease-in-out;
+        animation: waveAnimKey 2s infinite ease-in-out;
+        position: absolute;
+        bottom: 0;
+    }
+
+        .waveAnim i:nth-child(2) {
+            left: 11px;
+            -webkit-animation-delay: .3s;
+            -moz-animation-delay: .3s;
+            -ms-animation-delay: .3s;
+            -o-animation-delay: .3s;
+            animation-delay: .3s;
+        }
+
+        .waveAnim i:nth-child(3) {
+            left: 22px;
+            -webkit-animation-delay: .4s;
+            -moz-animation-delay: .4s;
+            -ms-animation-delay: .4s;
+            -o-animation-delay: .4s;
+            animation-delay: .4s;
+        }
+
+        .waveAnim i:nth-child(4) {
+            left: 33px;
+            -webkit-animation-delay: .6s;
+            -moz-animation-delay: .6s;
+            -ms-animation-delay: .6s;
+            -o-animation-delay: .6s;
+            animation-delay: .6s;
+        }
+
+        .waveAnim i:nth-child(5) {
+            left: 44px;
+            -webkit-animation-delay: .8s;
+            -moz-animation-delay: .8s;
+            -ms-animation-delay: .8s;
+            -o-animation-delay: .8s;
+            animation-delay: .8s;
+        }
+		.waveAnim i:nth-child(6) {
+            left: 55px;
+            -webkit-animation-delay: 1.0s;
+            -moz-animation-delay:1.0s;
+            -ms-animation-delay: 1.0s;
+            -o-animation-delay: 1.0s;
+            animation-delay: 1.0s;
+        }
+        .waveAnim i:nth-child(7) {
+            left: 66px;
+            -webkit-animation-delay: 1.2s;
+            -moz-animation-delay:1.2s;
+            -ms-animation-delay: 1.2s;
+            -o-animation-delay: 1.2s;
+            animation-delay: 1.2s;
+        }
+        .waveAnim i:nth-child(8) {
+            left:77px;
+            -webkit-animation-delay: 1.4s;
+            -moz-animation-delay:1.4s;
+            -ms-animation-delay: 1.4s;
+            -o-animation-delay: 1.4s;
+            animation-delay: 1.4s;
+        }
+        .waveAnim i:nth-child(9) {
+            left: 88px;
+            -webkit-animation-delay: 1.6s;
+            -moz-animation-delay:1.6s;
+            -ms-animation-delay: 1.6s;
+            -o-animation-delay: 1.6s;
+            animation-delay: 1.6s;
+        }
+        .waveAnim i:nth-child(10) {
+            left: 99px;
+            -webkit-animation-delay: 1.8s;
+            -moz-animation-delay:1.8s;
+            -ms-animation-delay: 1.8s;
+            -o-animation-delay: 1.8s;
+            animation-delay: 1.8s;
+        }
+        .waveAnim i:nth-child(11) {
+            left: 110px;
+            -webkit-animation-delay: .2s;
+            -moz-animation-delay: .2s;
+            -ms-animation-delay: .2s;
+            -o-animation-delay: .2s;
+            animation-delay: .2s;
+        }
+
+        .waveAnim i:nth-child(12) {
+            left: 121px;
+            -webkit-animation-delay: .4s;
+            -moz-animation-delay: .4s;
+            -ms-animation-delay: .4s;
+            -o-animation-delay: .4s;
+            animation-delay: .4s;
+        }
+
+        .waveAnim i:nth-child(13) {
+            left: 131px;
+            -webkit-animation-delay: .6s;
+            -moz-animation-delay: .6s;
+            -ms-animation-delay: .6s;
+            -o-animation-delay: .6s;
+            animation-delay: .6s;
+        }
+
+        .waveAnim i:nth-child(14) {
+            left:141px;
+            -webkit-animation-delay: .8s;
+            -moz-animation-delay: .8s;
+            -ms-animation-delay: .8s;
+            -o-animation-delay: .8s;
+            animation-delay: .8s;
+        }
+		.waveAnim i:nth-child(15) {
+            left:151px;
+            -webkit-animation-delay: 1.0s;
+            -moz-animation-delay:1.0s;
+            -ms-animation-delay: 1.0s;
+            -o-animation-delay: 1.0s;
+            animation-delay: 1.0s;
+        }
+        .waveAnim i:nth-child(16) {
+            left: 161px;
+            -webkit-animation-delay: 1.2s;
+            -moz-animation-delay:1.2s;
+            -ms-animation-delay: 1.2s;
+            -o-animation-delay: 1.2s;
+            animation-delay: 1.2s;
+        }
+        .waveAnim i:nth-child(17) {
+            left:171px;
+            -webkit-animation-delay: 1.4s;
+            -moz-animation-delay:1.4s;
+            -ms-animation-delay: 1.4s;
+            -o-animation-delay: 1.4s;
+            animation-delay: 1.4s;
+        }
+        .waveAnim i:nth-child(18) {
+            left: 181px;
+            -webkit-animation-delay: 1.6s;
+            -moz-animation-delay:1.6s;
+            -ms-animation-delay: 1.6s;
+            -o-animation-delay: 1.6s;
+            animation-delay: 1.6s;
+        }
+        .waveAnim i:nth-child(19) {
+            left: 191px;
+            -webkit-animation-delay: 1.8s;
+            -moz-animation-delay:1.8s;
+            -ms-animation-delay: 1.8s;
+            -o-animation-delay: 1.8s;
+            animation-delay: 1.8s;
+        }
+@-webkit-keyframes waveAnimKey {
+    0% {height:5px;-webkit-transform:translateY(0px);}
+    25% {height:120px;-webkit-transform:translateY(60px);}
+    50% {height:5px;-webkit-transform:translateY(0px);}
+    100% {height:5px;-webkit-transform:translateY(0px);}
+}
+ 
+@-moz-keyframes waveAnimKey {
+    0% {height:5px;-moz-transform:translateY(0px);}
+    25% {height:120px;-moz-transform:translateY(60px);}
+    50% {height:5px;-moz-transform:translateY(0px);}
+    100% {height:5px;-moz-transform:translateY(0px);}
+}
+ 
+@-ms-keyframes waveAnimKey {
+    0% {height:5px;-ms-transform:translateY(0px);}
+    25% {height:120px;-ms-transform:translateY(60px);}
+    50% {height:5px;-ms-transform:translateY(0px);}
+    100% {height:5px;-ms-transform:translateY(0px);}
+}
+ 
+@keyframes waveAnimKey {
+  0%{height: 5px;transform:translateY(0px);}
+  25%{height: 120px;transform:translateY(60px);}
+  50%{height: 5px;transform:translateY(0px);}
+  100%{height: 5px;transform:translateY(0px);}
+}

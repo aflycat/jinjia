@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,user-scalable=no" name="viewport" />
+    <title>AlarmCenter | 首页</title>
+    <link rel="icon" href="/Image/logo.png" type="image/x-icon">
+    <!--动画样式-->
+    <link rel="stylesheet" type="text/css" href="/Styles/Plugin/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/Plugin/transitionStyle.css" />
+    <!--滚动条插件-->
+    <link rel="stylesheet" type="text/css" href="/Styles/Plugin/scrollbarStyle.css" />
+    <!--tree插件-->
+    <link rel="stylesheet" type="text/css" href="/Styles/Plugin/tree.min.css" />
+    <!--图标字体样式-->
+    <link rel="stylesheet" type="text/css" href="/fonts/iconfont.css" />
+    <!--公共样式-->
+    <link rel="stylesheet" type="text/css" href="/Styles/puplicStyle.css" />
+    <!--所有控件皮肤-->
+    <link rel="stylesheet" type="text/css" href="/Styles/Home/homeStyle.css" />
+    <!--所有界面样式-->
+    <link rel="stylesheet" type="text/css" href="/Styles/Home/viewStyle.css" />
+    <!--<script type='text/javascript' src='http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js'></script>-->
+</head>
+<body>
+    <script>
+        if (window.localStorage.bgd) {
+            document.getElementsByTagName("html")[0].style.background = window.localStorage.bgd.split(':')[1];
+            document.getElementsByTagName("body")[0].style.background = window.localStorage.bgd.split(':')[1];
+        }
+        else {
+            document.getElementsByTagName("html")[0].style.background = "url(/Image/bg/bg_1.jpg)";
+            document.getElementsByTagName("body")[0].style.background = "url(/Image/bg/bg_1.jpg)";
+            window.localStorage.bgd = "background:url(/Image/bg/bg_1.jpg)";
+        }
+
+        //if (window.localStorage.bgd) {
+        //    document.getElementsByTagName("html")[0].style.background = window.localStorage.bgd.split(':')[1];
+        //    document.getElementsByTagName("body")[0].style.background = window.localStorage.bgd.split(':')[1];
+        //}
+        //else {
+        //    document.getElementsByTagName("html")[0].style.background = "#1b1e24";
+        //    document.getElementsByTagName("body")[0].style.background = "#1b1e24";
+        //    window.localStorage.bgd = "background:#1b1e24";
+        //}
+    </script>
+    <header>
+        <div class="headerLeft">
+            <img src="/Image/logo.png" />
+            <span>新一代机房综合监控系统</span>
+        </div>
+        <div class="headerRight">
+            <button class="btn btns-style-2" title="全屏" data-action="launchFullscreen"><i class="iconfont icon-quanping"></i></button>
+            <button class="btn btns-style-2" title="注销" data-action="userLogout"><i class="iconfont icon-logout"></i></button>
+            <div class="popupSkin">
+                <button class="btn btns-style-2" title="主题" data-action="userSkins" data-toggle="dropdown"><i class="iconfont icon-skin"></i></button>
+                <div class="popupSkin-menu userSkin">
+                    <img src="/Image/bg/bg_1.jpg" />
+                    <img src="/Image/bg/bg_2.jpg" />
+                    <img src="/Image/bg/bg_3.jpg" />
+                    <div class="clear"></div>
+                    <img src="/Image/bg/bg_4.jpg" />
+                    <img src="/Image/bg/bg_5.jpg" />
+                    <img src="/Image/bg/bg_6.jpg" />
+                    <div class="clear"></div>
+                    <img src="/Image/bg/bg_7.jpg" />
+                    <img src="/Image/bg/bg_8.jpg" />
+                    <img src="/Image/bg/bg_9.jpg" />
+                    <!--<span style="background:rgb(34,34,34);"></span>
+                    <span style="background:rgb(50,53,62);"></span>
+                    <span style="background:rgb(50,50,50);"></span>-->
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <button class="btn btns-style-2" title="折叠菜单" data-action="toggleMenu"><i class="iconfont icon-caidan"></i></button>
+        </div>
+    </header>
+
+    <nav>
+        <div class="navUser">
+            <span><i class="iconfont icon-yonghu"></i> <span id="userName"></span></span>
+        </div>
+        <div class="navList">
+            <ul>
+                <li class="active"><a href="#index" data-action="navLists"><i class="iconfont icon-yingsaitong"></i> <span>首页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
+                <li><a href="#RealTime" data-action="navLists"><i class="iconfont icon-shishizhuangtai"></i> <span>设备数据</span></a></li>
+                <li><a href="#ActualSys" data-action="navLists"><i class="iconfont icon-kuaizhao"></i> <span>实时快照</span></a></li>
+                <li><a href="#Systems" data-action="navLists"><i class="iconfont icon-xujicanshupeizhi"></i> <span>系统配置</span></a></li>
+                <li><a href="#EvtSelect" data-action="navLists"><i class="iconfont icon-chaxun"></i> <span>事件查询</span></a></li>
+                <li><a href="#AlarmTabulate" data-action="navLists"><i class="iconfont icon-renyuanpaiban"></i> <span>报警排表</span></a></li>
+                <li><a href="#TimedTask" data-action="navLists"><i class="iconfont icon-dingshirenwu"></i> <span>定时任务</span></a></li>
+                <li><a href="#EquipLink" data-action="navLists"><i class="iconfont icon-shebeiguanli"></i> <span>设备联动</span></a></li>
+                <li><a href="#EntrGuard" data-action="navLists"><i class="iconfont icon-menjinxitong"></i> <span>门禁系统</span></a></li>
+                <li><a href="#VideoSystem" data-action="navLists"><i class="iconfont icon-shipin"></i> <span>视频系统</span></a></li>
+                <li><a href="#Energy" data-action="navLists"><i class="iconfont icon-nenghaoguanli"></i> <span>能耗系统</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="main"></section>
+    <div id="getWebUser" style="display:none;"></div>
+    <footer></footer>
+    <script src="/Scripts/plug/jquery-1.10.1.min.js"></script>
+    <script src="/Scripts/plug/jquery-ui-1.10.3.min.js"></script>
+    <script src="/Scripts/plug/dropdown.min.js"></script>
+    <script src="/Scripts/plug/tree.min.js"></script>
+    <script src="/Scripts/plug/highcharts.js"></script>
+    <script src="/Scripts/plug/jquery.datetimepicker.js"></script>
+    <script src="/Scripts/public.js"></script>
+    <script src="/Data/pageConfig.js"></script>
+    <script>
+        window.onload = function () {
+            $(".navList ul").find("li").each(function (i) {
+                if (pages[i].value == '0') {
+                    $(this).hide();
+                }
+            });
+            var hs = window.location.hash.split('#')[1];
+            if (hs == null) {
+                loadName("index");
+            }
+            else {
+                loadName(hs);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

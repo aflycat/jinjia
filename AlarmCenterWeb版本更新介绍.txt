@@ -1,0 +1,177 @@
+/********************** 1.0.0.0 ************************/
+AlarmCenterWeb1.0.0.0
+时间：2015.04.24 09:53
+此版本为最原始版本，无皮肤。
+
+/********************** 2.0.0.0 ************************/
+AlarmCenterWeb2.0.0.0
+时间：2015.09.24 14:24
+此版本添加了皮肤功能
+
+/********************** 2.1.0.0 ************************/
+AlarmCenterWeb2.1.0.0
+时间：2015.11.16 10:39
+
+/********************** 2.2.0.0 ************************/
+AlarmCenterWeb2.2.0.0
+时间：2016.02.22 13:57
+
+/********************** 3.0.0.0 ************************/
+AlarmCenterWeb3.0.0.0
+时间：2016.04.11 15:28
+
+/********************** 3.9.0.0 ************************/
+AlarmCenterWeb3.9.0.0
+时间：2016.04.19 15:32
+应用新样式，测试新皮肤
+
+/********************** 4.0.0.0 ************************/
+AlarmCenterWeb4.0.0.0
+时间：2016.04.29 17:55
+应用新皮肤
+
+/********************** 4.1.0.0 ************************/
+AlarmCenterWeb4.1.0.0
+时间：2016.06.14 15:32
+新增移动端（webapp）
+
+/********************** 4.1.1.0 ************************/
+AlarmCenterWeb4.1.1.0
+时间：2016.07.06 09:23
+粮达网移动端
+
+/********************** 4.2.0.0 ************************/
+AlarmCenterWeb4.2.0.0
+时间：2016.08.08 15:29
+粮达网移动端（修复了一些BUG）
+
+/********************** 4.2.0.2 ************************/
+AlarmCenterWeb4.2.0.2
+时间：2016.08.08 15:29
+修复百度语音接口，新增讯飞语音接口，采用原生android开发。
+
+/********************** 4.2.0.3 ************************/
+时间：2016.11.25 10:08
+1、修复Android6.0无法读取文件和录音的权限
+2、添加一键配置权限功能（WebPage页面）
+3、修复WebService不能传 字符+ 引起的错误
+4、修复iPhone6 plus顶部一段空白
+5、添加U3D页面
+
+/********************** 4.3.0.0 ************************/
+时间：2016.12.13 17:20
+1、修复Android6.0权限设置
+2、登录web端时，需要先登录c/s客户端，否则第一次登录将失败，第二次正常。
+3、最好设置固定IP
+4、修复网络和服务接口超时引起的崩溃
+5、Android App嵌入crosswalk浏览器内核
+6、优化App性能，全局监听错误信息，规避错误引起的崩溃。
+
+/********************** 4.4.0.0 ************************/
+时间：2017.01.04 11:21
+1、修复eval,ajax引起的内存泄漏
+2、修复百度地图标记点的内存泄漏和闪退
+3、修复刷新功能引起的重复刷新
+4、错误输出到web服务根目录
+5、禁止使用页面缓存
+
+/********************** 4.4.0.1 ************************/
+时间：2017.01.09 10:21
+1、修复长App时间使用而服务断开的情况
+2、修复返回按钮
+
+/********************** 4.4.0.2 ************************/
+时间：2017.01.20 09:50
+1、修复未登录可以进入首页
+2、修复未登录无法注销
+3、修复初始化未登录进入登录页而不是进入首页
+4、添加查询表接口 GetDataTableFromSQLSer
+5、添加执行SQL语句命令 ExecuteSQLSer
+修改文件：
+a、/index.html
+b、/Scripts/mobile/mobileAll.js
+c、/Scripts/public.js
+d、/GWService.asmx
+
+/********************** 4.4.1.0 ************************/
+时间：2017.02.08 14:30
+1、修复未登录可以进入首页（PC端）
+2、整合图标字体文件
+3、添加扫描二维码接口错误输出
+修改文件：
+a、/Scripts/public.js
+b、/GWServices.asmx
+c、/Views/Mobile/home.html
+d、/fonts/
+
+/********************** 4.4.2.0 ************************/
+时间：2017.02.17 11:14
+1、修复语音界面无法选择第三方语音
+2、更新底部导航菜单，取消动画载入
+3、新增ExpressionEval接口（执行表达式）
+4、修复多层跳转返回时，主页空白
+修改文件：
+a、/Views/Mobile/Voice.html
+b、/Views/Mobile/home.html
+c、/Styles/Mobile/home.css
+d、/fonts/
+e、/GWServices.asmx
+f、/Scripts/mobile/mobileAll.js
+
+/********************** 4.5.0.0 ************************/
+时间：2017.02.24 17:30
+1、将遥测点改为模拟量，遥信点改为状态量。
+2、首页界面中子页面列表，用pageName属性表示子页面名称(mobileAll)
+3、可定制插件化开发（测试阶段 appPopup.js）
+4、修复个别脚本使用eval函数
+5、设备数据界面（移动端）选择设备列表，在子界面中，模拟量、状态量或者设置若无数据将自动隐藏
+6、添加RealEquipCount接口，用于 获取实时数据ycp,yxp,set项的总数
+7、添加ZCimg接口，用于获取资产图片；ZCMaintain接口，用于添加资产维护记录；ZCimgUpload，用于存储客户端上传的图片
+8、添加table,tab,拍照插件和资产页的新样式
+修改文件：
+a、/Views/Home/RealTime.html
+b、/Views/Home/Systems.html
+c、/Views/plug/System_config.html
+d、/Views/Mobile/plug/RealTimeTable.html
+e、/Scripts/mobile/mobileAll.js
+f、/Scripts/Home/TimedTask.js,/Scripts/mobile/RealTime.js
+g、/GWService.asmx
+h、/Styles/Mobile/home.css
+
+/********************** 4.5.1.0 ************************/
+时间：2017.02.28 10:47
+1、新增RichScan2（扫描二维码）接口，扫码可控制设备或者打开设备信息和资产信息进行维护
+2、新增AddWeihuRecord4ZC接口，添加资产维护记录，自动添加维护记录的图片。
+3、新增RemoveWeihuRecord4ZC接口，删除一条资产维护记录
+4、新增SendImageToSvr接口，设置资产图片
+5、新增GetImageFromSvr接口，获取资产图片
+6、新增扫描回调函数（RichScanCallback）
+7、本次更新适用于AlarmCenter8.8.0.1
+修改文件：
+a、/GWServices.asmx
+b、/Scripts/mobile/mobileAll.js
+c、/Scripts/mobile/RichScanCallback.js
+
+/********************** 4.5.2.0 ************************/
+时间：2017.03.06 10:47
+1、修改RealTimeData接口，将获取ycp,yxp,equip,setparm表的实时数据
+2、新增GetEquipTreeLists2接口，返回xml字符串格式的设备列表（原接口返回JSON格式）
+3、已作废接口：GetEquipTreeLists，RichScan，ZCimg，ZCimgUpload，ZCMaintain
+4、重构移动端界面“设备数据”:
+	a.实现列表自动分级
+	b.即时获取设备报警状态
+	c.设备有报警将置顶前列
+	d.设备信息界面采用viewShow插件（载入动态页面）和tabAndTable插件（tab页插件）
+	e.tab页插件优化，实现自动判断有无模拟量、状态量和设置等选项。
+5、新增ServerHub，用于客户端与服务端双向通讯（测试中）。
+
+修改文件：
+a、/GWServices.asmx
+b、/Data/ClassLib.cs
+c、/Scripts/mobile/RichScanCallback.js,
+	plugin/appPopup.js,
+	mobileAll.js,
+	RealTime.js,
+	RichScanCallback.js
+d、/Styles/Mobile/home.css
+e、/Views/Mobile/home.html

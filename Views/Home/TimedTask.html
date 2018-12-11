@@ -1,0 +1,231 @@
+﻿<div class="ribbon">
+    <button class="btn btns-style-3" title="刷新" data-action="refreshAgain"><i class="iconfont icon-shuaxin"></i></button><span>当前页 / </span><span id="ribbonNow" style="color:#FFD600">定时任务</span>
+</div>
+
+<div class="contents">
+    <div class="contentHeader">
+        <span><i class="iconfont icon-dingshirenwu"></i> 定时任务</span>
+    </div>
+
+    <div class="contentBody">
+        <div class="contentBodyInAn Slide-in-topSlow">
+            <ul class="nav-tabList timed-nav-tab">
+                <li class="active" data-action="tabList" href="#alarmTab_1"><span>普通任务</span></li>
+                <li data-action="tabList" href="#alarmTab_2"><span>循环任务</span></li>
+                <li data-action="tabList" href="#alarmTab_3" onclick="initWeek()"><span>每周任务安排</span></li>
+                <li data-action="tabList" href="#alarmTab_4" onclick="specFordata()"><span>特殊日期安排</span></li>
+            </ul>
+            <div class="tab-content timed-tab-content">
+                <article id="alarmTab_1" class="tab-pane active animated">
+                    <div class="col-md3-1">
+                        <div class="timed-list-1">
+                            <p class="timed-list-title">普通任务列表</p>
+                            <div class="tabuTop">
+                                <button class="btn btns-style-4" onclick="add_pro_1()" onmousemove="datajs()"><i class="iconfont icon-tianjia"></i> 添加</button>
+                                <button class="btn btns-style-4" id="delete_pro_1" onclick="delete_pro_1()" disabled="disabled" onmousemove="datajs()"><i class="iconfont icon-shanchu"></i> 删除</button>
+                                <button class="btn btns-style-4" id="btn_Select" onclick="save_pro()" onmousemove="datajs()"><i class="iconfont icon-baocun"></i> 保存</button>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="tableAuto timed-list-table" onmouseout="mouseout_pro_1(this)">
+                                <table id="alarmTab_table_1">
+                                    <thead>
+                                        <tr>
+                                            <th>普通任务名称</th>
+                                            <th>说明</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md3-2">
+                        <div class="timed-list-2">
+                            <p class="timed-list-title"><b id="leftTime_b_1"></b>-系统控制</p>
+                            <div class="tabuTop">
+                                <button class="btn btns-style-4" id="add_pro_2" onclick="add_pro_2()" disabled="disabled" onmousemove="datajs()"><i class="iconfont icon-tianjia"></i> 添加</button>
+                                <button class="btn btns-style-4" id="delete_pro_2" disabled="disabled" onclick="delete_pro_1()" onmousemove="datajs()"><i class="iconfont icon-shanchu"></i> 删除</button>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="tableAuto timed-list-table" onmouseout="mouseout_pro_2(this)">
+                                <table id="alarmTab_table_2">
+                                    <thead>
+                                        <tr>
+                                            <th>时间</th>
+                                            <th>系统控制</th>
+                                            <th>有效时段</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md3-3">
+                        <div class="timed-list-1">
+                            <p class="timed-list-title"><b id="leftTime_b_2"></b>-设备控制</p>
+                            <div class="tabuTop">
+                                <button id="add_pro_3" class="btn btns-style-4" onclick="add_pro_3()" disabled="disabled" onmousemove="datajs()"><i class="iconfont icon-tianjia"></i> 添加</button>
+                                <button class="btn btns-style-4" id="delete_pro_3" onclick="delete_pro_3()" disabled="disabled" onmousemove="datajs()"><i class="iconfont icon-shanchu"></i> 删除</button>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="tableAuto timed-list-table" onmouseout="mouseout_pro_3(this)">
+                                <table id="alarmTab_table_3">
+                                    <thead>
+                                        <tr>
+                                            <th>时间</th>
+                                            <th>设备控制</th>
+                                            <th>有效时段</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="alarmTab_2" class="tab-pane animated">
+                    <div class="tabuTop">
+                        <button onclick="add_cir()" class="btn btns-style-4"><i class="iconfont icon-tianjia"></i> 增加</button>
+                        <button id="delete_cir" onclick="delete_cir()" disabled="disabled" class="btn btns-style-4"><i class="iconfont icon-shanchu"></i> 删除</button>
+                        <button id="change_cir" disabled="disabled" onclick="change_cir()" class="btn btns-style-4"><i class="iconfont icon-baocun"></i> 更改</button>
+                    </div>
+                    <div class="tableAuto timed-list-table2">
+                        <table id="cir_table">
+                            <thead>
+                                <tr>
+                                    <th>循环任务名称</th>
+                                    <th>有效起始时间</th>
+                                    <th>有效结束时间</th>
+                                    <th>开始执行时间</th>
+                                    <th>是否必须执行完整</th>
+                                    <th>最大循环次数</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article id="alarmTab_3" class="tab-pane animated">
+                    <div class="tabuTop">
+                        <button class="btn btns-style-4" onclick="save_ttsk()"><i class="iconfont icon-baocun"></i> 保存</button>
+                    </div>
+
+                    <div class="tableAuto timed-list-table2" style="right:86%;">
+                        <table id="ttk_ul_Mon">
+                            <thead>
+                                <tr>
+                                    <th>星期一</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+
+                    <div class="tableAuto timed-list-table2" style="left:14%;right:72%;">
+                        <table id="ttk_ul_Tues">
+                            <thead>
+                                <tr>
+                                    <th>星期二</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+
+                    <div class="tableAuto timed-list-table2" style="left:28%;right:58%;">
+                        <table id="ttk_ul_Wed">
+                            <thead>
+                                <tr>
+                                    <th>星期三</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+
+                    <div class="tableAuto timed-list-table2" style="left:42%;right:44%;">
+                        <table id="ttk_ul_Thurs">
+                            <thead>
+                                <tr>
+                                    <th>星期四</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+
+                    <div class="tableAuto timed-list-table2" style="left:56%;right:30%;">
+                        <table id="ttk_ul_Fri">
+                            <thead>
+                                <tr>
+                                    <th>星期五</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+
+                    <div class="tableAuto timed-list-table2" style="left:70%;right:16%;">
+                        <table id="ttk_ul_Sat">
+                            <thead>
+                                <tr>
+                                    <th>星期六</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+
+                    <div class="tableAuto timed-list-table2" style="left:84%;">
+                        <table id="ttk_ul_Sun">
+                            <thead>
+                                <tr>
+                                    <th>星期日</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article id="alarmTab_4" class="tab-pane animated">
+                    <div class="tabuTop">
+                        <button onclick="add_spec()" class="btn btns-style-4" onmousemove="datajs_spec()"><i class="iconfont icon-tianjia"></i> 增加</button>
+                        <button id="delete_speced" onclick="delete_spec()" disabled="disabled" class="btn btns-style-4" onmousemove="datajs_spec()"><i class="iconfont icon-shanchu"></i> 删除</button>
+                        <button onclick="save_spec()" class="btn btns-style-4" onmousemove="datajs_spec()"><i class="iconfont icon-baocun"></i> 保存</button>
+                    </div>
+                    <div class="timed-special-1">
+                        <div class="tableAuto">
+                            <table id="spec_table">
+                                <thead>
+                                    <tr>
+                                        <th>日期名称</th>
+                                        <th>起始日期</th>
+                                        <th>结束日期</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="timed-special-2">
+                        <div class="tableAuto" onmouseout="checkOnmouse(this)" onmousemove="datajs()">
+                            <table id="spec_ul">
+                                <thead>
+                                    <tr>
+                                        <th>普通任务名称</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/Scripts/home/TimedTask.js"></script>

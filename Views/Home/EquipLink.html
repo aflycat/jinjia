@@ -1,0 +1,98 @@
+﻿<div class="ribbon">
+    <button class="btn btns-style-3" title="刷新" data-action="refreshAgain"><i class="iconfont icon-shuaxin"></i></button><span>当前页 / </span><span id="ribbonNow" style="color:#FFD600">设备联动</span>
+</div>
+
+<div class="contents">
+    <div class="contentHeader">
+        <span><i class="iconfont icon-shebeiguanli"></i> 设备联动</span>
+    </div>
+
+    <div class="contentBody">
+        <div class="contentBodyInAn Slide-in-topSlow">
+            <ul class="nav-tabList timed-nav-tab">
+                <li class="active" data-action="tabList" href="#alarmTab_1"><span>联动设置</span></li>
+                <li data-action="tabList" href="#alarmTab_2" onclick="scene_edi()"><span>场景编辑</span></li>
+            </ul>
+            <div class="tab-content timed-tab-content">
+                <article id="alarmTab_1" class="tab-pane active animated">
+                    <div class="tabuTop">
+                        <button onclick="add_equip()" class="btn btns-style-4" onmousemove="btn_mouse()"><i class="iconfont icon-tianjia"></i> 增加</button>
+                        <button id="delete_equip" onclick="delete_equip()" disabled="disabled" class="btn btns-style-4" onmousemove="btn_mouse()"><i class="iconfont icon-shanchu"></i> 删除</button>
+                        <button id="save_equip" disabled="disabled" onclick="save_equip()" class="btn btns-style-4" onmousemove="btn_mouse()"><i class="iconfont icon-baocun"></i> 保存</button>
+                    </div>
+                    <div class="tableAuto timed-list-table2" onmouseout="mouseout_equip_1(this)">
+                        <table id="equip_table_1">
+                            <thead>
+                                <tr>
+                                    <th>使能</th>
+                                    <th>触发设备</th>
+                                    <th>触发类型</th>
+                                    <th>触发点</th>
+                                    <th>延时(毫秒)</th>
+                                    <th>联动设备</th>
+                                    <th>联动命令</th>
+                                    <th>命令参数</th>
+                                    <th>备注</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article id="alarmTab_2" class="tab-pane animated">
+                    <div class="equip-cj-1">
+                        <p style="text-align:center;">场景列表</p>
+                        <div class="equip-cj-1-list listStyle">
+                            <ul id="sceneul"></ul>
+                        </div>
+                    </div>
+                    <div class="equip-cj-2">
+                        <div class="tabuTop">
+                            <button onclick="add_scene()" class="btn btns-style-4"><i class="iconfont icon-tianjia"></i> 增加</button>
+                            <button id="delete_scene" onclick="delete_scene()" disabled="disabled" class="btn btns-style-4"><i class="iconfont icon-shanchu"></i> 删除</button>
+                            <button id="save_scene" disabled="disabled" onclick="save_scene()" class="btn btns-style-4"><i class="iconfont icon-baocun"></i> 保存</button>
+                        </div>
+                        <p class="timed-panel-title" style="margin-top:34px;">场景内容编辑</p>
+                        <div class="equip-cj-2-content">
+                            <div class="equip-cj-2-content-1">
+                                <div class="equip-cj-2-content-1-titles">
+                                    <div class="equip-cj-2-content-1-title">场景名称:</div>
+                                    <input type="text" class="input" id="sceneipt" style="display:table-cell;float:left;width:auto!important;" onmouseout="sceneMouseout()" />
+                                </div>
+                                <div class="equip-cj-1-list equip-cj-1-list2 listStyle">
+                                    <ul id="scene_listul"></ul>
+                                </div>
+                                <div class="equip-cj-1-btn">
+                                    <button onclick="delete_scenelist()" class="btn btns-style-1">删除</button>
+                                    <button onclick="move_scene(0)" class="btn btns-style-1">上移</button>
+                                    <button onclick="move_scene(1)" class="btn btns-style-1">下移</button>
+                                </div>
+                            </div>
+                            <div class="equip-cj-2-content-2">
+                                <p>
+                                    <label><input type="radio" id="scene_rd_1" name="scene_rdo" checked="checked" onclick="equipAndtime(0)">设备控制</label>
+                                </p>
+                                <select class="select" id="equip_sceneul" style="width:100%;" onchange="change_clicks()"></select>
+                                <div id="text_value"></div>
+                                <p>
+                                    <label><input type="radio" id="scene_rd_2" name="scene_rdo" onclick="equipAndtime(1)">延时间隔</label>
+                                </p>
+                                <div class="timed-loop-right-text">
+                                    <input id="text_scene_1" type="text" class="input" disabled="disabled" style="width:60%;" /><span>天&nbsp;&nbsp;&nbsp;</span>
+                                    <input id="text_scene_2" type="text" class="input" disabled="disabled" /><span>小时</span>
+                                </div>
+                                <div class="timed-loop-right-text">
+                                    <input id="text_scene_3" type="text" class="input" disabled="disabled" /><span>分钟</span>
+                                    <input id="text_scene_4" type="text" class="input" disabled="disabled" /><span>秒</span>
+                                </div>
+                                <button class="btn btns-style-1" onclick="insert_sceneList()">插入</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/Scripts/home/EquipLink.js"></script>

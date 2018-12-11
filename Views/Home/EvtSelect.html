@@ -1,0 +1,161 @@
+﻿<div class="ribbon">
+    <button class="btn btns-style-3" title="刷新" data-action="refreshAgain"><i class="iconfont icon-shuaxin"></i></button><span>当前页 / </span><span id="ribbonNow" style="color:#FFD600">事件查询</span>
+</div>
+
+<div class="contents">
+    <div class="contentHeader">
+        <span><i class="iconfont icon-chaxun"></i> 事件查询</span>
+    </div>
+
+    <div class="contentBody">
+        <div class="contentBodyInAn Slide-in-topSlow">
+            <div class="col-md-3 tree">
+                <div class="treeList">
+                    <ul role="tree" id="treelist">
+                        <li class="parent_li">
+                            <span>
+                                <i class="iconfont icon-jian"></i>
+                                <input type="checkbox" id="treelistAll" onclick="treelistAll(event)" />
+                                <label>所有设备</label>
+                            </span>
+                            <ul></ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="evtTop">
+                    <span>起始时间：</span>
+                    <input type="text" class="input" id="datetimepicker_1" disabled="disabled" />
+                    <span>结束时间：</span>
+                    <input type="text" class="input" id="datetimepicker_2" disabled="disabled" />
+                    <select id="selectDate" onchange="onSelectDate(this)" class="select">
+                        <option value="nowDate" selected>当天</option>
+                        <option value="weekDate">本周</option>
+                        <option value="monthDate">本月</option>
+                        <option value="appointDate">用户指定</option>
+                    </select>
+                    <button class="btn btns-style-4" id="btn_Select" onclick="selectData()"><i class="iconfont icon-chaxun"></i> 查询</button>
+                </div>
+                <div class="clear"></div>
+                <ul class="nav-tabList sys-nav-tab">
+                    <li class="active" data-action="tabList" href="#equEvt"><span>设备事件</span></li>
+                    <li data-action="tabList" href="#setEvt"><span>设置事件</span></li>
+                    <li data-action="tabList" href="#sysEvt"><span>系统事件</span></li>
+                </ul>
+                <div class="tab-content evt-tab-content">
+                    <article id="equEvt" class="tab-pane active animated">
+                        <div class="tableAuto">
+                            <table id="tableEqu">
+                                <thead>
+                                    <tr>
+                                        <th>设备名称</th>
+
+                                        <th>设备事件</th>
+
+                                        <th>时间</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+
+                        <div class="tablePaging">
+                            <div class="table-btnPages">
+                                <button id="btnPages_1_1" class="btn btns-style-1" disabled="disabled" onclick="pagHome(1)"><i class="iconfont icon-shangyizhang"></i></button>
+                                <button id="btnPages_1_2" class="btn btns-style-1" disabled="disabled" onclick="pagLarclick(1)"><i class="iconfont icon-shangyiye"></i></button>
+                                <button id="btnPages_1_3" class="btn btns-style-1" disabled="disabled" onclick="pagRarclick(1)"><i class="iconfont icon-xiayiye"></i></button>
+                                <button id="btnPages_1_4" class="btn btns-style-1" disabled="disabled" onclick="pagEnd(1)"><i class="iconfont icon-xiayizhang"></i></button>
+                            </div>
+                            <div class="table-nowPage table-nowPage-first">
+                                <span>当前第<b id="nowPage_now_1"> </b>页</span>&nbsp;&nbsp;&nbsp;
+                                <span>共<b id="nowPage_count_1"> </b>页</span>&nbsp;&nbsp;&nbsp;
+                                <span>共<b id="nowPage_item_1"> </b>项</span>
+                            </div>
+                            <div class="table-nowPage">
+                                <span>跳转至 <input id="nowPage_goPage_1" type="text" value="1" class="input" /> 页</span>
+                                <span><button id="nowPage_goPageBtn_1" class="btn btns-style-1" onclick="nowPage_goPageBtn(1)" disabled="disabled">确定</button></span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </article>
+
+                    <article id="setEvt" class="tab-pane animated">
+                        <div class="tableAuto">
+                            <table id="tableSet">
+                                <thead>
+                                    <tr>
+                                        <th>设备名称</th>
+
+                                        <th>设置事件</th>
+
+                                        <th>操作人员</th>
+
+                                        <th>时间</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+
+                        <div class="tablePaging">
+                            <div class="table-btnPages">
+                                <button id="btnPages_2_1" class="btn btns-style-1" disabled="disabled" onclick="pagHome(2)"><i class="iconfont icon-shangyizhang"></i></button>
+                                <button id="btnPages_2_2" class="btn btns-style-1" disabled="disabled" onclick="pagLarclick(2)"><i class="iconfont icon-shangyiye"></i></button>
+                                <button id="btnPages_2_3" class="btn btns-style-1" disabled="disabled" onclick="pagRarclick(2)"><i class="iconfont icon-xiayiye"></i></button>
+                                <button id="btnPages_2_4" class="btn btns-style-1" disabled="disabled" onclick="pagEnd(2)"><i class="iconfont icon-xiayizhang"></i></button>
+                            </div>
+                            <div class="table-nowPage table-nowPage-first">
+                                <span>当前第<b id="nowPage_now_2"> </b>页</span>&nbsp;&nbsp;&nbsp;
+                                <span>共<b id="nowPage_count_2"> </b>页</span>&nbsp;&nbsp;&nbsp;
+                                <span>共<b id="nowPage_item_2"> </b>项</span>
+                            </div>
+                            <div class="table-nowPage">
+                                <span>跳转至 <input id="nowPage_goPage_2" type="text" value="1" class="input" /> 页</span>
+                                <span><button id="nowPage_goPageBtn_2" class="btn btns-style-1" onclick="nowPage_goPageBtn(2)" disabled="disabled">确定</button></span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </article>
+
+                    <article id="sysEvt" class="tab-pane animated">
+                        <div class="tableAuto">
+                            <table id="tableSys">
+                                <thead>
+                                    <tr>
+                                        <th>系统事件</th>
+
+                                        <th>时间</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+
+                        <div class="tablePaging">
+                            <div class="table-btnPages">
+                                <button id="btnPages_3_1" class="btn btns-style-1" disabled="disabled" onclick="pagHome(3)"><i class="iconfont icon-shangyizhang"></i></button>
+                                <button id="btnPages_3_2" class="btn btns-style-1" disabled="disabled" onclick="pagLarclick(3)"><i class="iconfont icon-shangyiye"></i></button>
+                                <button id="btnPages_3_3" class="btn btns-style-1" disabled="disabled" onclick="pagRarclick(3)"><i class="iconfont icon-xiayiye"></i></button>
+                                <button id="btnPages_3_4" class="btn btns-style-1" disabled="disabled" onclick="pagEnd(3)"><i class="iconfont icon-xiayizhang"></i></button>
+                            </div>
+                            <div class="table-nowPage table-nowPage-first">
+                                <span>当前第<b id="nowPage_now_3"> </b>页</span>&nbsp;&nbsp;&nbsp;
+                                <span>共<b id="nowPage_count_3"> </b>页</span>&nbsp;&nbsp;&nbsp;
+                                <span>共<b id="nowPage_item_3"> </b>项</span>
+                            </div>
+                            <div class="table-nowPage">
+                                <span>跳转至 <input id="nowPage_goPage_3" type="text" value="1" class="input" /> 页</span>
+                                <span><button id="nowPage_goPageBtn_3" class="btn btns-style-1" onclick="nowPage_goPageBtn(3)" disabled="disabled">确定</button></span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/Scripts/home/EvtSelect.js"></script>

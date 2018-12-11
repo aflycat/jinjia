@@ -1,0 +1,294 @@
+@font-face {
+	font-family: Digital-7 Mono;
+	src: url(../fonts/DIGITAL REGULAR.TTF);
+}
+
+@font-face {
+	font-family: 'zhsrxt';
+	src: url(../fonts/zhsrxt2.0.ttf);
+}
+
+@font-face {
+	font-family: 'PingFang ExtraLight';
+	src: url(../fonts/PingFang ExtraLight.ttf);
+}
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+	font-size: 30px;
+	/*background: url(../img/background.png) no-repeat center center/100% 100%;*/
+	background: transparent;
+	box-sizing: border-box;
+}
+
+.main {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	font-family: 'PingFang ExtraLight';
+}
+
+.purchase {
+	width: 30.5%;
+	height: 100%;
+	background: url(../img/ring/zhezhu.png) no-repeat center center/100% 100%;
+	float: left;
+}
+
+.personnel {
+	width: 38%;
+	height: 93%;
+	background: url(../img/ring/power.png) no-repeat center center/100% 100%;
+	margin-left: 65px;
+	float: left;
+	position: relative;
+	top: 6%;
+}
+
+.stock {
+	width: 100%;
+	height: 100%;
+	background: url(../img/produce/square.png) no-repeat center center/100% 100%;
+}
+
+.capacity{
+	width: 28.7%;
+	height: 48.5%;
+	position: relative;
+	top: 2.2%;
+	background: url(../img/ring/zhezhu.png) no-repeat center center/100% 100%;
+	float: left;
+	margin-left: 65px;
+}
+
+.content-title {
+	font-size: 2rem;
+	height: 15%;
+	color: #fff;
+	font-family: 'zhsrxt';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 7%;
+	background: url(../img/title_bg.png) no-repeat;
+	background-position: -13% 80%;
+}
+
+.content-title i {
+	color: #0AFDE9;
+	font-size: 1.2rem;
+	padding: 0 0.8rem;
+	display: flex;
+}
+
+
+.consumption-rate {
+	width: 35%;
+	height: 35%;
+	float: left;
+	margin-left: 1.5%;
+}
+
+.amount-statistics {
+	width: 61%;
+	height: 30%;
+	float: left;
+	margin-left: 2%;
+}
+
+.cost-reduction-rate {
+	clear: both;
+	width: 60%;
+	height: 40%;
+	float: left;
+	margin: 2% 0% 0% 1.5%;
+}
+
+.material-consumption {
+	width: 35%;
+	height: 45%;
+	float: left;
+	margin: 2% 0% 0% 1.5%;
+}
+
+.material-consumption .header-title {
+	font-size: 1.46rem;
+	height: 18%;
+	color: #fff;
+	font-weight: 400;
+	font-family: 'zhsrxt';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#consumptionTableId {
+	width: 100%;
+	height: 80%;
+	margin: 0;
+	padding: 0;
+	border: 2px solid #353E5F;
+}
+
+#consumptionTableId tr th {
+	border: 2px solid #353E5F;
+	padding: 5px;
+	text-align: center;
+	font-size: 0.75rem;
+	font-weight: 400;
+	color: #DBD7D4;
+}
+
+#consumptionTableId td {
+	border: 2px solid #353E5F;
+	text-align: center;
+	font-size: 0.8rem;
+	font-weight: 400;
+	color: #fff;
+}
+
+#consumptionTableId th {
+	text-transform: uppercase;
+	font-size: 1rem;
+	letter-spacing: 1px;
+}
+
+.stock .stock-left-charts{
+	width: 35%;
+	height: 100%;
+	float: left;
+}
+
+.stock-left-charts .left-huan-charts{
+	width: 100%;
+	height: 50%;
+}
+
+.stock .stock-right-charts{
+	width: 65%;
+	height: 100%;
+	float: left;
+}
+
+.stock-right-charts .stock-zhu-charts{
+	width: 100%;
+	height: 78%;
+	float: right;
+}
+
+.capacity .capacity-duidie{
+	height: 70%;
+	width: 80%;
+	margin: auto;
+}
+
+.personnel .personnel-map{
+	width: 100%;
+	height: 55%;
+}
+
+.personnel .personal-num-chart{
+	width: 50%;
+	height: 35%;
+	float: left;
+}
+
+.personnel .group-personal-num{
+	width: 25%;
+	height: 30%;
+	position: absolute;
+	top: 8%;
+	left: 5%;
+}
+
+.group-personal-num .personal-all-num-desc{
+	font-size: 1.46rem;
+	height: 20%;
+	color: #fff;
+	font-family: 'zhsrxt';
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.group-personal-num .personal-all-num{
+	width: 100%;
+	height: 30%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.group-personal-num .personal-all-num span{
+	background: rgba(48, 62, 91,.8);
+	color: #04FAF7;
+	margin: 0 5px;
+	padding: 5px;
+	font-size: 2.6rem;
+	font-weight: 400;
+}
+
+.group-personal-num .personal-all-num label{
+	color: #04FAF7;
+	margin: 0 5px;
+	padding: 5px;
+	font-size: 2.6rem;
+	font-weight: 400;
+}
+
+.group-personal-num .personal-all-num font{
+	color: #abaaab;
+	margin: 0 5px;
+	padding: 0 5px;
+	font-size: 1.2rem;
+	font-weight: 400;
+	position: relative;
+	top: 0.5rem;
+}
+
+.group-personal-num .senior-executive{
+	font-size: 1.05rem;
+	height: 18%;
+	color: #FF114D;
+	font-family: 'zhsrxt';
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 2%;
+}
+
+.group-personal-num .senior-executive-num{
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.group-personal-num .senior-executive-num span{
+	background: rgba(48, 62, 91,.8);
+	color: #FF114D;
+	margin: 0 5px;
+	padding: 5px;
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+.group-personal-num .senior-executive-num label{
+	color: #FF114D;
+	margin: 0 5px;
+	padding: 5px;
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+.group-personal-num .senior-executive-num font{
+	color: #abaaab;
+	margin: 0 5px;
+	padding: 0 5px;
+	font-size: 1.5rem;
+	font-weight: 400;
+	position: relative;
+}

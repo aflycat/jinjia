@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>数据中心云平台</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_545610_unke9y3ln7wlv7vi.css" />
+		<link rel="stylesheet" type="text/css" href="css/ring_temperature.css" />
+	</head>
+
+	<body>
+		<p class="content-title">温度监测</p>
+		<div class="main">
+			<div class="temperature-content floatl">
+				<div class="temperature-chart" id="temperatureCharts"></div>
+			</div>
+
+			<div class="temperature-desc floatr">
+				<p class="model-title"><i class="icon iconfont icon-web-triangle-left"></i> 平均温度
+					<i class="icon iconfont icon-web-triangle-right"></i></p>
+				<div class="temperature-data">
+					<span id="avgTemperatureId">00<font>°C</font></span>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts-liquidfill.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ring_temperature.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>

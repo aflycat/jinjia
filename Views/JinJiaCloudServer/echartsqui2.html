@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				background: url(img/background.png) no-repeat center center/100% 100%;
+			}
+			
+			#main {
+				padding: 20px;
+			}
+			
+			#main:after {
+				display: block;
+				content: ' ';
+				clear: both;
+			}
+			
+			h1 {
+				margin: 20px;
+				font-size: 20px;
+				font-weight: bold;
+				text-align: center;
+				color: #D94854;
+			}
+			
+			.chart {
+				width: 25%;
+				height: 300px;
+				float: left;
+			}
+			
+			@media (max-width: 980px) {
+				.chart {
+					height: 200px;
+				}
+			}
+			
+			@media (max-width: 750px) {
+				.chart {
+					width: 33.333333%;
+				}
+			}
+			
+			@media (max-width: 500px) {
+				.chart {
+					width: 50%;
+					height: 180px;
+				}
+			}
+			
+			.main-chart {
+				width: 100%;
+				height: 600px;
+				float: none;
+				margin: 50px 0;
+			}
+			
+			.nav {
+				text-align: center;
+				margin: 10px;
+			}
+			
+			a {
+				text-decoration: none;
+				background-color: #294D99;
+				transition: 0.5s;
+				color: white;
+				padding: 6px 18px;
+				border-radius: 20px;
+				margin: 0 4px;
+			}
+			
+			a:hover {
+				background-color: #1598ED;
+			}
+			
+			#view-more {
+				text-align: center;
+				margin: 20px 0 80px 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id='main'>
+			<div class="chart main-chart" id="liquidfill-chart"></div>
+
+		</div>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts-liquidfill.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var chart = echarts.init(document.getElementById('liquidfill-chart'));
+			var option = {
+				series: [{
+						type: 'liquidFill',
+						color: ['#294D99', '#156ACF', '#1598ED', '#45BDFF'],
+						center: ['50%', '50%'],
+						radius: '52%',
+						amplitude: '8%',
+						waveLength: '80%',
+						phase: 'auto',
+						period: 'auto',
+						direction: 'right',
+						shape: 'circle',
+
+						waveAnimation: true,
+						animationEasing: 'linear',
+						animationEasingUpdate: 'linear',
+						animationDuration: 2000,
+						animationDurationUpdate: 1000,
+
+						outline: {
+							show: true,
+							borderDistance: 0,
+							itemStyle: {
+								color: 'none',
+								borderColor: '#294D99',
+								borderWidth: 0,
+								shadowBlur: 0,
+								shadowColor: 'rgba(0, 0, 0, 0.25)'
+							}
+						},
+
+						backgroundStyle: {
+							color: new echarts.graphic.RadialGradient(0.5, 0.5, 0.5, [{
+								offset: 0,
+								color: 'rgba(25, 193, 213, 1)'
+							}, {
+								offset: 0.9,
+								color: 'rgba(1, 83, 138, 1)'
+							}], false),
+						},
+
+						itemStyle: {
+							opacity: 0.95,
+							shadowBlur: 50,
+							color: '#22c8e4',
+						},
+
+						label: {
+							show: true,
+							//							color: '#294D99',
+							//							insideColor: '#fff',
+							//							fontSize: 50,
+							//							fontWeight: 'bold',
+							//
+							//							align: 'center',
+							//							baseline: 'middle',
+							//							position: 'inside'
+							position: ['50%', '50%'],
+							formatter: function() {
+								return '{labelValue|' + 21 + '}{labelUnit|%}';
+							},
+							rich: {
+								labelValue: {
+									fontSize: 82,
+									fontFamily: 'Digital-7 Mono',
+									color: '#FFF600',
+									insideColor: '#FFF600',
+								},
+								labelUnit: {
+									padding: [0, 0, 0, 5],
+									fontSize: 72,
+									color: '#FFF600',
+									insideColor: '#FFF600',
+								}
+							}
+						},
+
+						emphasis: {
+							itemStyle: {
+								opacity: 0.8
+							}
+						},
+						data: [{
+							value: 0.21,
+							itemStyle: {
+								color: '#029fd2',
+								opacity: 1
+							},
+						},{
+							value: 0.21,
+							itemStyle: {
+								color: '#22c8e4',
+								opacity: 1
+							},
+						}]
+					}, {
+						name: '',
+						type: 'pie',
+						radius: ['52%', '68%'],
+						color: ['rgba(1, 53, 96,.5)'],
+						hoverAnimation: false,
+						label: {
+							normal: {
+								show: false
+							}
+						},
+						labelLine: {
+							normal: {
+								show: false
+							}
+						},
+						data: [{
+							value: 1,
+							name: ''
+						}]
+					},
+					{
+						name: '',
+						type: 'pie',
+						radius: ['66%', '82%'],
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(25, 193, 213, 1)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(9, 113, 184, 1)'
+						}], false),
+						hoverAnimation: false,
+						label: {
+							normal: {
+								show: false
+							}
+						},
+						labelLine: {
+							normal: {
+								show: false
+							}
+						},
+						data: [{
+							value: 6,
+							name: ''
+						}]
+					}
+				]
+			};
+			chart.setOption(option);
+		</script>
+	</body>
+
+</html>

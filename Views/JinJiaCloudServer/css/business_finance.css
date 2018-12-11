@@ -1,0 +1,269 @@
+@font-face {
+	font-family: Digital-7 Mono;
+	src: url(../fonts/DIGITAL REGULAR.TTF);
+}
+
+@font-face {
+	font-family: 'zhsrxt';
+	src: url(../fonts/zhsrxt2.0.ttf);
+}
+
+@font-face {
+	font-family: 'PingFang ExtraLight';
+	src: url(../fonts/PingFang ExtraLight.ttf);
+}
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+	font-size: 30px;
+	background: url(../img/background.png) no-repeat center center/100% 100%;
+	/*background: transparent;*/
+	box-sizing: border-box;
+}
+
+.main {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	font-family: 'PingFang ExtraLight';
+}
+
+.purchase {
+	width: 30.5%;
+	height: 100%;
+	background: url(../img/ring/zhezhu.png) no-repeat center center/100% 100%;
+	float: left;
+}
+
+.personnel {
+	width: 40%;
+	height: 93%;
+	/*background: url(../img/ring/power.png) no-repeat center center/100% 100%;*/
+	margin-left: 65px;
+	float: left;
+	position: relative;
+	top: 6%;
+}
+
+.personnel .market-distribution-map{
+	width: 100%;
+	height: 98%;
+	position: absolute;
+	top: 1%;
+	left: 0%;
+}
+
+.pay-taxes {
+	width: 26.5%;
+	height: 58.5%;
+	background: url(../img/ring/zhezhu.png) no-repeat center center/100% 100%;
+	float: left;
+	margin-left: 65px;
+}
+
+.pay-taxes .pay-taxes-title{
+	font-size: 1.6rem;
+	height: 15%;
+	color: #fff;
+	font-family: 'zhsrxt';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pay-taxes .pay-taxes-box{
+	width: 100%;
+	height: 30%;
+}
+
+.pay-taxes-box-half{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.pay-taxes-box-half .pay-box-half-title{
+	font-size: 1.3rem;
+	height: 15%;
+	color: #2AF0FD;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pay-taxes-box-half .senior-executive-num{
+	width: 100%;
+	height: 85%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pay-taxes-box-half .senior-executive-num span{
+	background: rgba(48, 62, 91,.8);
+	color: #0AE8FD;
+	margin: 0 5px;
+	padding: 0 5px;
+	font-size: 3.8rem;
+	font-weight: 400;
+}
+
+.pay-taxes-box-half .senior-executive-num label{
+	color: #0AE8FD;
+	margin: 0 5px;
+	padding: 0 5px;
+	font-size: 3.8rem;
+	font-weight: 400;
+}
+
+.pay-taxes-box-half .senior-executive-num font{
+	color: #0AE8FD;
+	margin: 0 5px;
+	padding: 0 5px;
+	font-size: 1.8rem;
+	font-weight: 400;
+	position: relative;
+	top: 0.5rem;
+}
+
+.pay-taxes .asset-statistics{
+	width: 100%;
+	height: 55%;
+}
+
+.capacity{
+	width: 26.5%;
+	height: 38.5%;
+	position: relative;
+	top: 2.2%;
+	background: url(../img/ring/zhezhu.png) no-repeat center center/100% 100%;
+	float: left;
+	margin-left: 65px;
+}
+
+.capacity .operation-type{
+	width: 100%;
+	height: 79%;
+	background: url(../img/operation_type.png) no-repeat center;
+}
+
+.capacity .operation-type-title{
+	font-size: 1.8rem;
+	height: 20%;
+	color: #fff;
+	font-family: 'zhsrxt';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content-title {
+	font-size: 2.35rem;
+	height: 15%;
+	color: #fff;
+	font-family: 'zhsrxt';
+	font-weight: 400;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content-title i {
+	color: #0AFDE9;
+	font-size: 1.2rem;
+	padding: 0 0.8rem;
+	display: flex;
+}
+
+
+.consumption-rate {
+	width: 30%;
+	height: 33%;
+	float: left;
+	margin-left: 1.5%;
+}
+
+.amount-statistics {
+	width: 66%;
+	height: 30%;
+	float: left;
+	margin-left: 2%;
+}
+
+.operating-profit{
+	width: 100%;
+	height: 35%;
+}
+
+.group-personal-num .personal-all-num-desc{
+	font-size: 1.46rem;
+	height: 20%;
+	color: #fff;
+	font-family: 'zhsrxt';
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.group-personal-num .personal-all-num{
+	width: 100%;
+	height: 30%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.group-personal-num .personal-all-num span{
+	background: rgba(48, 62, 91,.8);
+	color: #04FAF7;
+	margin: 0 5px;
+	padding: 5px;
+	font-size: 2.6rem;
+	font-weight: 400;
+}
+
+.group-personal-num .personal-all-num label{
+	color: #04FAF7;
+	margin: 0 5px;
+	padding: 5px;
+	font-size: 2.6rem;
+	font-weight: 400;
+}
+
+.group-personal-num .senior-executive{
+	font-size: 1.05rem;
+	height: 18%;
+	color: #FF114D;
+	font-family: 'zhsrxt';
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 2%;
+}
+
+.group-personal-num .senior-executive-num{
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.group-personal-num .senior-executive-num span{
+	background: rgba(48, 62, 91,.8);
+	color: #FF114D;
+	margin: 0 5px;
+	padding: 5px;
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+.group-personal-num .senior-executive-num label{
+	color: #FF114D;
+	margin: 0 5px;
+	padding: 5px;
+	font-size: 1.8rem;
+	font-weight: 400;
+}

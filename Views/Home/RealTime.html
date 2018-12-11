@@ -1,0 +1,77 @@
+﻿<div class="ribbon">
+    <button class="btn btns-style-3" title="刷新" data-action="refreshAgain"><i class="iconfont icon-shuaxin"></i></button><span>当前页 / </span><span id="ribbonNow" style="color:#FFD600">设备数据</span>
+</div>
+
+<div class="contents">
+    <div class="contentHeader">
+        <span><i class="iconfont icon-shishizhuangtai"></i> 设备数据</span>
+    </div>
+
+    <div class="contentBody">
+        <div class="contentBodyInAn Slide-in-topSlow">
+            <div class="col-md-3 tree">
+                <div class="treeList">
+                    <ul role="tree" id="treelist"></ul>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <ul class="nav-tabList">
+                    <li id="tableYcLi" class="active" data-action="tabList" href="#tableYcp"><span>模拟量</span></li>
+                    <li id="tableYxLi" data-action="tabList" href="#tableYxp"><span>状态量</span></li>
+                    <li id="tableSeLi" data-action="tabList" href="#tableSet"><i class="iconfont icon-ordinaryset"></i> <span>设置</span></li>
+                </ul>
+                <div class="tab-content">
+                    <article id="tableYcp" class="tab-pane active animated">
+                        <div class="tableAuto alarmReal">
+                            <table id="tableYc">
+                                <thead>
+                                    <tr>
+                                        <th>报警状态</th>
+                                        <th>模拟量编号</th>
+                                        <th>模拟量名称</th>
+                                        <th>实时值</th>
+                                        <th>曲线</th>
+                                        <th>处理意见</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                    <article id="tableYxp" class="tab-pane animated">
+                        <div class="tableAuto alarmReal">
+                            <table id="tableYx">
+                                <thead>
+                                    <tr>
+                                        <th>报警状态</th>
+                                        <th>状态量编号</th>
+                                        <th>状态量名称</th>
+                                        <th>实时状态</th>
+                                        <th>处理意见</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                    <article id="tableSet" class="tab-pane animated">
+                        <div class="tableAuto alarmReal">
+                            <table id="tableSe">
+                                <thead>
+                                    <tr>
+                                        <th>设置命令</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/Scripts/home/RealTime.js"></script>

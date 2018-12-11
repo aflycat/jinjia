@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>数据中心云平台</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_545610_unke9y3ln7wlv7vi.css" />
+		<link rel="stylesheet" type="text/css" href="css/cloud_log.css" />
+	</head>
+
+	<body>
+		<div class="main">
+			<!-- 今日资源状态 -->
+			<div class="modular">
+				<p class="model-title"><i class="icon iconfont icon-web-triangle-left"></i> 今日资源状态
+					<i class="icon iconfont icon-web-triangle-right"></i></p>
+				<div class="present-Resource">
+					<ul>
+						<li>云主机</li>
+						<li>新增<span id="instanceAddId">0</span><font>个</font></li>
+						<li>释放<span id="instanceDeletelId">0</span><font>个</font></li>
+					</ul>
+					<ul>
+						<li>云硬盘</li>
+						<li>新增<span id="volumeAddId">0</span><font>G</font></li>
+						<li>释放<span id="volumeDeletelId">0</span><font>G</font></li>
+					</ul>
+					<ul>
+						<li>私&nbsp;&nbsp;&nbsp;网</li>
+						<li>新增<span id="networkAddId">0</span><font>个</font></li>
+						<li>释放<span id="networkDeletelId">0</span><font>个</font></li>
+					</ul>
+					<ul>
+						<li>路由器</li>
+						<li>新增<span id="routerAddId">0</span><font>个</font></li>
+						<li>释放<span id="routerDeletelId">0</span><font>个</font></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- 操作日志 -->
+			<div class="operator">
+				<p class="model-title"><i class="icon iconfont icon-web-triangle-left"></i> 操作日志
+					<i class="icon iconfont icon-web-triangle-right"></i></p>
+				<div class="operator-box" id="operatorBoxId">
+					<ul class="operator-log" id="operatorLogId">
+						<li class="operator-log-light">
+							<div class="content-list">
+								<div class="content-list-left">
+									<div class="list-header">0000-00-00 00:00:00</div>
+									<div class='list-desc'>创建云主机 云主机</div>
+								</div>
+								<div class="content-list-right">
+									<div class="list-user">admin</div>
+									<div class="list-result color-success">成功</div>
+								</div>
+							</div>
+						</li>
+						<li class="operator-log-dark">
+							<div class="content-list">
+								<div class="content-list-left">
+									<div class="list-header">0000-00-00 00:00:00</div>
+									<div class='list-desc'>创建云主机 云主机</div>
+								</div>
+								<div class="content-list-right">
+									<div class="list-user">admin</div>
+									<div class="list-result color-success">成功</div>
+								</div>
+							</div>
+						</li>
+						<li class="operator-log-dark">
+							<div class="content-list">
+								<div class="content-list-left">
+									<div class="list-header">0000-00-00 00:00:00</div>
+									<div class='list-desc'>创建云主机 云主机</div>
+								</div>
+								<div class="content-list-right">
+									<div class="list-user">admin</div>
+									<div class="list-result color-success">成功</div>
+								</div>
+							</div>
+						</li>
+						<li class="operator-log-dark">
+							<div class="content-list">
+								<div class="content-list-left">
+									<div class="list-header">0000-00-00 00:00:00</div>
+									<div class='list-desc'>创建云主机 云主机</div>
+								</div>
+								<div class="content-list-right">
+									<div class="list-user">admin</div>
+									<div class="list-result color-success">成功</div>
+								</div>
+							</div>
+						</li>
+						<li class="operator-log-dark">
+							<div class="content-list">
+								<div class="content-list-left">
+									<div class="list-header">0000-00-00 00:00:00</div>
+									<div class='list-desc'>创建云主机 云主机</div>
+								</div>
+								<div class="content-list-right">
+									<div class="list-user">admin</div>
+									<div class="list-result color-success">成功</div>
+								</div>
+							</div>
+						</li>
+						<li class="operator-log-dark">
+							<div class="content-list">
+								<div class="content-list-left">
+									<div class="list-header">0000-00-00 00:00:00</div>
+									<div class='list-desc'>创建云主机 云主机</div>
+								</div>
+								<div class="content-list-right">
+									<div class="list-user">admin</div>
+									<div class="list-result color-success">成功</div>
+								</div>
+							</div>
+						</li>
+						<li class="operator-log-dark">
+							<div class="content-list">
+								<div class="content-list-left">
+									<div class="list-header">0000-00-00 00:00:00</div>
+									<div class='list-desc'>创建云主机 云主机</div>
+								</div>
+								<div class="content-list-right">
+									<div class="list-user">admin</div>
+									<div class="list-result color-success">成功</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+		<script src="js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts-liquidfill.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/cloud_log.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

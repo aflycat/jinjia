@@ -1,0 +1,24 @@
+﻿<div class="ribbon">
+    <button class="btn btns-style-3" title="刷新" data-action="refreshAgain"><i class="iconfont icon-shuaxin"></i></button><span>当前页 / </span><span id="ribbonNow" style="color:#FFD600">首页</span>
+</div>
+
+<div class="contents Slide-in-topSlow">
+    <div class="homeImage"><img src="/Image/backs.png" /></div>
+    <div class="navBtnList">
+        <ul></ul>
+    </div>
+</div>
+<script>
+    $(".main").attr("value", "0");
+    var listNum = 0;
+    $(".navList ul li").each(function (i) {
+        if (i > 0 && $(this).attr("style") != "display: none;") {
+            var newRow = $("<li></li>");
+            newRow.append("<a href='" + $(this).find("a").attr('href') + "' data-action='navLists'><p>" + $(this).find("a").find("span").text() + "</p><div class='navBtnListImg'><img src='/Image/nav/nav_" + i + ".png'/></div></a>");
+            $(".navBtnList").find("ul").append(newRow);
+            listNum++;
+        }
+    });
+    $(".navBtnList ul").attr("style", "margin:0 auto;width:" + listNum * 90 + "px");
+</script>
+

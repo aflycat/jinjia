@@ -1,0 +1,172 @@
+﻿/*html{font-size: 18px;}*/
+/*html{
+    font-size: calc(100vw/7.5);
+}*/
+.voiceTitle{color: #fff;font-size: 0.2rem;letter-spacing: 10px;}
+.waveAnim i{background: #fff;margin-bottom: 20px;}
+.marTB{margin-top:0.1rem;margin-bottom:0.1rem;}
+*{margin:0;padding:0;}
+.clear{clear:both;}
+.navbar{background:#283341;color:#fff;}
+/*.navbar .center {font-size: 0.3rem !important;}*/
+.navbar a{color:#fff;}
+.navbar a i{color:#fff;font-size:0.3rem;}
+.navbar a.link{width:40px;text-align:center;}
+.navbar:after{height:0;}
+.toolbar:before{height:0;}
+
+.navbar-inner>.left>.back{padding:0 10px;margin-left:-8px;}
+
+.tabbar{background:#252a2d;color:#fff;}
+.toolbar-inner a.link{padding-bottom:0px;padding-top:0;}
+.tabbar a{color:#c7c7c7; position:relative;text-align:center;}
+.tabbar a span{font-size:12px!important; position:absolute;bottom:6px;}
+.tabbar a i{font-size:24px; display:block; margin-top:2px;}
+.tabbar a.active{color:#ffb400!important;}
+.tabbar a.link.active-state{opacity:1;} 
+
+.mobileNotSelect{-moz-user-select: -moz-none;-moz-user-select: none;-o-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;}
+.list-block{position:relative;}
+.list-block .item-title{font-size:16px!important;}
+
+/******flex布局******/
+.flexBoxs{display: -webkit-box;display: -ms-flexbox;display: flex;display: -webkit-flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.flexBoxEnd{display: -webkit-box;display: -ms-flexbox;display: flex;display: -webkit-flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: flex-end;align-items: flex-end;}
+
+/*首页*/
+*{
+  -webkit-touch-callout:none; /*系统默认菜单被禁用*/
+  -webkit-user-select:none; /*webkit浏览器*/
+  -khtml-user-select:none; /*早期浏览器*/
+  -moz-user-select:none;/*火狐*/
+  -ms-user-select:none; /*IE10*/
+  user-select:none;
+}
+#home{background: #202832;}
+#jinJia .btnTouch{position: relative;background: url(/Image/bg_up.png) no-repeat center center;background-size:contain ;text-align: center;width:1.6rem;height:1.6rem;}        	
+.bgDown{background: url(/Image/bg_down.png) no-repeat center center !important;background-size:contain !important;}
+#jinJia .row .btnTouch p{z-index: 2;position: relative;color:#34cbbd;font-size:0.18rem;margin-top: 0;}
+#jinJia .row .btnTouch i{font-size:0.5rem !important;color:#34cbbd;}
+#jinJia .row .btnTouch .menu{position: absolute;width: 2.6rem;height: 0.7rem;left:-0.5rem;z-index: 9;top: 1.7rem;display: none;}
+#jinJia .row .btnTouch .menu ul{height: 0.7rem;width: 100%;background:url(/Image/menu-bg.png) no-repeat center center;background-size:100% auto ;}
+#jinJia .row .btnTouch .menu ul li{list-style: none;float: left;width: 50%;text-align: center;line-height: 0.8rem;font-size: 0.2rem;}
+#jinJia .row .btnTouch .menu ul .lef{color:#00feef;width: 100%;height: 100%;display: block;}
+#jinJia .row .btnTouch .menu ul .rig{color:#00feef;width: 100%;height: 100%;display: block;}
+.likeBtnTouch{position: relative;background: url(/Image/bg_up.png) no-repeat center center;background-size:contain ;text-align: center;width:1.6rem;height:1.6rem;}
+.likeBtnTouch p{z-index: 2;position: relative;color:#34cbbd;font-size:0.18rem;margin-top: 0;}
+.likeBtnTouch i{font-size:0.5rem !important;color:#34cbbd;}
+
+
+
+#jinJia .row .btnTouch .thrMenu{position: absolute;width: 3.9rem;height: 0.7rem;left:-1.2rem;z-index: 9;top: 1.7rem;display: none;}
+#jinJia .row .btnTouch .thrMenu ul{height: 0.7rem;width: 100%;background:url(/Image/menu-bg3.png) no-repeat center center;background-size:100% 95% ;}
+#jinJia .row .btnTouch .thrMenu ul li{list-style: none;float: left;width: 33%;text-align: center;line-height: 0.8rem;font-size: 0.2rem;}
+#jinJia .row .btnTouch .thrMenu  .lef{color:#00feef;width: 100%;height: 100%;display: block;}
+#jinJia .row .btnTouch .thrMenu  .mid{color:#00feef;width: 100%;height: 100%;display: block;}
+#jinJia .row .btnTouch .thrMenu  .rig{color:#00feef;width: 100%;height: 100%;display: block;}
+
+#voiceSwit_ho{width: 1rem;height: 1rem;right: 0.5rem;bottom: 0.5rem;background:url(/Image/circle_up.png) no-repeat center center;background-size:contain ;}
+.cirlbgDown{background:url(/Image/circle_down.png) no-repeat center center !important;background-size:contain ;}
+
+#voiceSwit_ho i{font-size: 0.4rem !important;color:#34cbbd ;}
+#waveAnim_ho i{background: #fff;margin-bottom: 20px;}
+#voiceMessage_ho { color: #fff;font-size: 0.2rem;letter-spacing: 10px;}
+#voiceBtn {font-size: 6vh !important;color: #34cbbd;}	
+#leftPanel{background: #283341;}
+#leftPanel ul li {background: #283341;}
+
+/*#leftPanel ul li .item-media i{font-size:0.4rem !important;}
+#leftPanel ul li .item-title{font-size:0.3rem !important;}*/
+
+/*动环*/
+#MovingRing{background: #202832;}
+#MovingRing .row{height: 2.2rem;}
+.bgDown{background: url(/Image/bg_down.png) no-repeat center center !important;background-size:contain !important;}
+#MovingRing .row .touchBtn{height: 1.6rem;width:1.6rem;background: url(/Image/bg_up.png) no-repeat center center;background-size: contain;text-align: center;}
+#MovingRing .row .touchBtn i{font-size: 0.6rem !important;color:#34cbbd ;margin-top:0.2rem;}
+#MovingRing .row .touchBtn p{font-size: 0.2rem !important;color: #34cbbd;margin:0;}
+#voiceSwit_mo{width: 1rem;height: 1rem;right: 1rem;bottom: 0.5rem;background:url(/Image/circle_up.png) no-repeat center center;background-size:contain ;}
+
+
+.cirlbgDown{background:url(/Image/circle_down.png) no-repeat center center !important;background-size:contain ;}
+
+/*私有云平台*/
+#CloudPlat{background: #202832;}
+#CloudPlat .row{height: 2.2rem;}
+.bgDown{background: url(/Image/bg_down.png) no-repeat center center !important;background-size:contain !important;}
+#CloudPlat .row .touchBtn{height: 1.6rem;width:1.6rem;background: url(/Image/bg_up.png) no-repeat center center;background-size: contain;text-align: center;}
+#CloudPlat .row .touchBtn i{font-size: 0.5rem !important;color:#34cbbd ;margin-top:0.2rem;margin-bottom: 0.1rem;}
+#CloudPlat .row .touchBtn p{font-size: 0.2rem !important;color: #34cbbd;margin:0;}
+
+/*能源管理*/
+#ManageEnergy{background: #202832;}
+#ManageEnergy .row{height: 2.2rem;}
+.bgDown{background: url(/Image/bg_down.png) no-repeat center center !important;background-size:contain !important;}
+#ManageEnergy .row .touchBtn{height: 1.6rem;width:1.6rem;background: url(/Image/bg_up.png) no-repeat center center;background-size: contain;text-align: center;}
+#ManageEnergy .row .touchBtn i{font-size: 0.5rem !important;color:#34cbbd ;margin-top:0.2rem;margin-bottom: 0.1rem;}
+#ManageEnergy .row .touchBtn p{font-size: 0.2rem !important;color: #34cbbd;margin:0;}
+
+/*智慧工厂*/
+
+
+/*视频监控*/
+#videoMonitor{background: #202832;}
+#videoMonitor .row{height: 2.2rem;}
+.bgDown{background: url(/Image/bg_down.png) no-repeat center center !important;background-size:contain !important;}
+#videoMonitor .row .touchBtn{height: 1.6rem;width:1.6rem;background: url(/Image/bg_up.png) no-repeat center center;background-size: contain;text-align: center;}
+#videoMonitor .row .touchBtn i{font-size: 0.5rem !important;color:#34cbbd ;margin-top:0.2rem;margin-bottom: 0.1rem;}
+#videoMonitor .row .touchBtn p{font-size: 0.2rem !important;color: #34cbbd;margin:0;}
+
+/*能源管理*/
+#smartCom{background: #202832;}
+#smartCom .row{height: 2.2rem;}
+.bgDown{background: url(/Image/bg_down.png) no-repeat center center !important;background-size:contain !important;}
+#smartCom .row .touchBtn{height: 1.6rem;width:1.6rem;background: url(/Image/bg_up.png) no-repeat center center;background-size: contain;text-align: center;}
+#smartCom .row .touchBtn i{font-size: 0.5rem !important;color:#34cbbd ;margin-top:0.2rem;margin-bottom: 0.1rem;}
+#smartCom .row .touchBtn p{font-size: 0.2rem !important;color: #34cbbd;margin:0;}
+
+/*智慧产品*/
+#smartProduct{background: #202832;}
+/*生产工艺*/
+#productTechnology{background: #202832;}
+#productTechnology .row{height: 2.2rem;}
+.bgDown{background: url(/Image/bg_down.png) no-repeat center center !important;background-size:contain !important;}
+#productTechnology .row .touchBtn{height: 1.6rem;width:1.6rem;background: url(/Image/bg_up.png) no-repeat center center;background-size: contain;text-align: center;}
+#productTechnology .row .touchBtn i{font-size: 0.5rem !important;color:#34cbbd ;margin-top:0.2rem;margin-bottom: 0.1rem;}
+#productTechnology .row .touchBtn p{font-size: 0.2rem !important;color: #34cbbd;margin:0;}
+
+
+/*语音*/
+.voice{border-radius:50%;-webkit-border-radius:50%;width:120px;height:120px;margin:0 auto;background-color:#6e7f8a;text-align:center;line-height:120px;}
+.voiceActive{background-color:#40494F;color:#fff;box-shadow: 0 0 2rem .5rem #616f79;}
+.voice i{font-size:60px;font-weight:100!important;color:rgba(255,255,255,.45);}
+.voiceTitle{text-align:center;width:100%;height:30px;line-height:30px;margin-top:10px;}
+.voiceClose{width:100%;margin-top:20px;}
+.voice.active-state{background-color:#40494F;color:#fff;box-shadow: 0 0 2rem .5rem #616f79;}
+i.icon.icon-back{background-image:none!important;width:auto!important;height:auto!important;}
+.icon{font-family:"iconfont" !important;font-size:16px!important;font-style:normal;-webkit-font-smoothing: antialiased;-webkit-text-stroke-width: 0.2px;-moz-osx-font-smoothing: grayscale;}
+.list-block{margin:0;}
+.voiceDivs{position:absolute;left:0;right:0;bottom:60px;height:300px;}
+
+
+
+/*选择图片或拍照插件*/
+.addimgDiv{width:100%;background:#fff;}
+.addimgList{height:100%;margin:12px;}
+.addimgListItme{width:64px;height:90px;overflow:hidden;position:relative;margin-right:12px;}
+.addimgListIcon{font-size:64px;color:#484848;position:absolute;top:0;left:0;z-index:10;cursor:pointer;pointer-events: none;background:#fff;}
+.addimgList i{font-size:64px;color:#484848;position:absolute;top:0;left:0;z-index:10;cursor:pointer;pointer-events: none;background:#fff;}
+.addimgList input{z-index:9;width:64px;height:90px;}
+.addimgListItme img{width:64px;height:64px;margin-top:13px;}
+.flexBoxStart{display: -webkit-box;display: -ms-flexbox;display: flex;display: -webkit-flex;flex-wrap:wrap;-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;}
+.btnUpload{margin:0 12px;}
+
+
+
+/*事件查询*/
+.evtSelect{height:45px;background:#fff;line-height:45px;text-align:center;padding:0 12px;}
+.evtSelect i{font-size:24px;}
+.equipList{max-height:176px;overflow:auto;}
+.equipList:after{height:0;}
+.screenBtn{background:#fff;position:absolute;top:0;bottom:0;left:0;right:0;padding:8px;;}
+.timeScreen .active{background:#007aff;}

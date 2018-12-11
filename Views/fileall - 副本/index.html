@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>背景动画</title>
+    <link rel="stylesheet" href="./static/styles/index.css">
+</head>
+
+<body>
+    <canvas id="canvas-bg" width="700" height="700"></canvas>
+    <div id="title" class="">
+        <div><img src="./static/imgs/x1.png"></div>
+    </div>
+    <div class="title">
+        <div class="box">
+            <div class="t">
+                <img class="icon hide1" src="./static/imgs/icon.png" alt="">
+                <img class="icon2 hide1" src="./static/imgs/icon2.png" alt="">
+                <img class="txt hide" src="./static/imgs/txt.png" alt="">
+            </div>
+            <div class="l">
+                <img class="line hide" src="./static/imgs/line.png" alt="">
+                <!-- <img class="secondLine hide" src="./static/imgs/line.png" alt=""> -->
+                <!-- <img class="lineligth hide" src="./static/imgs/icon2.png" alt=""> -->
+            </div>
+            <div class="b">
+                <img class="txt-en hide" src="./static/imgs/txt_en.png" alt="">
+            </div>
+        </div>
+    </div>
+    <video id="mv-flyto" src="./static/mv/flyto1.webm"></video>
+    <img src="./static/imgs/img.png"  id="circle"/>
+    <img src="./static/imgs/icon2.png" alt="" class="star-light">
+    <div class="containerSecond containerSecondParent">
+       <div class="containerContent" >
+            <div class="displaynone Manufacture_parent center_light">
+                <div class="wrap_title">
+                    <img src="static/imgs/secondLevel/public_wrap.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_0">
+                    <img src="static/imgs/secondLevel/wrap_center_0.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_1">
+                    <img src="static/imgs/secondLevel/wrap_center_1.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_2">
+                    <img src="static/imgs/secondLevel/wrap_center_2.png" class="displaynone"/>
+                </div>
+                <div class="displaynone wrap_center_3"></div>
+                <div class="displaynone wrap_center_4"></div>
+            </div>
+            <div class="displaynone business_parent center_light">
+                <div class="wrap_title">
+                    <img src="static/imgs/secondLevel/public_wrap.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_0">
+                    <img src="static/imgs/secondLevel/wrap_center_0.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_1">
+                    <img src="static/imgs/secondLevel/wrap_center_1.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_2">
+                    <img src="static/imgs/secondLevel/wrap_center_2.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_3">
+                    <img src="static/imgs/secondLevel/wrap_center_3.png" class="displaynone"/>
+                </div>
+                <div class="displaynone wrap_center_4"></div>
+            </div>
+            <div class="displaynone product_parent center_light">
+                <div class="wrap_title">
+                    <img src="static/imgs/secondLevel/public_wrap.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_0">
+                    <img src="static/imgs/secondLevel/wrap_center_0.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_1">
+                    <img src="static/imgs/secondLevel/wrap_center_1.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_2">
+                    <img src="static/imgs/secondLevel/wrap_center_2.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_3">
+                    <img src="static/imgs/secondLevel/wrap_center_3.png" class="displaynone"/>
+                </div>
+                <div class="displaynone wrap_center_4"></div>
+            </div>
+            <div class="displaynone park_parent center_light">
+                <div class="wrap_title">
+                    <img src="static/imgs/secondLevel/public_wrap.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_0">
+                    <img src="static/imgs/secondLevel/wrap_center_0.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_1">
+                    <img src="static/imgs/secondLevel/wrap_center_1.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_2">
+                    <img src="static/imgs/secondLevel/wrap_center_2.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_3">
+                    <img src="static/imgs/secondLevel/wrap_center_3.png" class="displaynone"/>
+                </div>
+                <div class="displaynone wrap_center_4"></div>
+            </div>
+            <div class="displaynone data_parent center_light">
+                <div class="wrap_title">
+                    <img src="static/imgs/secondLevel/public_wrap.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_0">
+                    <img src="static/imgs/secondLevel/wrap_center_0.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_1">
+                    <img src="static/imgs/secondLevel/wrap_center_1.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_2">
+                    <img src="static/imgs/secondLevel/wrap_center_2.png" class="displaynone"/>
+                </div>
+                <div class="wrap_center_3">
+                    <img src="static/imgs/secondLevel/wrap_center_3.png" class="displaynone"/>
+                </div>
+                <div class="displaynone wrap_center_4"></div>
+            </div>
+            <div id="codeLizi"></div>
+       </div>
+    </div>
+    <div class="backgroundAll containerSecondParent0"></div>
+
+    <script src="./static/js/jquery-3.3.1.js"></script>    
+    <script type="text/javascript" src="./static/js/echarts.min.js"></script>
+    <script type="text/javascript" src="./static/js/secondLevel.js"></script>
+    <script src="./static/js/index.js"></script>
+    <script src="./static/js/tween.js"></script>
+    <script src="./static/js/animation.js"></script>
+    <script type="text/javascript">
+    setTimeout(function(){
+        
+        setTimeout(function(){
+            Math.animation(0,1, 500, 'sine.easeIn', (val,end) => {
+                var opacity = 1-val;
+                $('img.icon2')[0].style.opacity = opacity; 
+                $('img.icon2')[0].style.transform = 'scale('+val*10+')'; 
+                setTimeout(function(){$('img.icon').css("opacity","1");},200);
+                if(end)
+                 { 
+                    step4(); //地球、字体上浮/地球旋转
+                    $("#title").removeClass("titleCircle");  
+                }
+            });
+        },500);//logo show
+        $("#title").addClass("titleCircle");
+        // step1(100);
+    },3000);
+    // setTimeout(function(){
+    //     Math.animation(0,10000, 100, 'sine.easeIn', (val,end) => {
+    //         $(".secondLine")[0].style.left =val+"px";
+    //         var opacity = 1-val/10000;
+    //            $(".secondLine")[0].style.opacity = opacity; 
+    //     });
+    // },3000)
+    </script>
+
+   <script type="text/javascript">
+
+   </script>
+</body>
+
+</html>

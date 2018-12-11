@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>数据中心云平台</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/ring.css"/>
+	</head>
+	<body>
+		<div class="main">
+			<div class="temperature-content floatl">
+				<div class="temperature-chart" id="temperatureCharts"></div>
+			</div>
+			
+			<div class="temperature-desc floatr">
+				<p class="model-title">平均温度</p>
+				<div class="temperature-data">
+					<span id="avgTemperatureId">00<font>°C</font></span>
+				</div>
+			</div>
+			
+			<div class="power-content floatl">
+				<div class="power-content-info">
+					<div class="power-title floatl color-light">
+						供电状态
+					</div>
+					<div class="power-charts floatr">
+						<div class="power-charts-info">
+							<div class="power-charts-desc">
+								<font><span id="ApowerId">000</span>V</font>
+							</div>
+							<p class="power-charts-title">A相电压</p>
+						</div>
+						<div class="power-charts-info">
+							<div class="power-charts-desc">
+								<font><span id="BpowerId">000</span>V</font>
+							</div>
+							<p class="power-charts-title">B相电压</p>
+						</div>
+						<div class="power-charts-info">
+							<div class="power-charts-desc">
+								<font><span id="CpowerId">000</span>V</font>
+							</div>
+							<p class="power-charts-title">C相电压</p>
+						</div>
+					</div>
+				</div>
+				<div class="power-content-info">
+					<div class="power-title floatl color-normal">
+						市电
+					</div>
+					<div class="power-charts floatr">
+						<div class="power-charts-info">
+							<div class="power-charts-desc">
+								<font><span id="AelectricId">000</span>A</font>
+							</div>
+							<p class="power-charts-title">A相电流</p>
+						</div>
+						<div class="power-charts-info">
+							<div class="power-charts-desc">
+								<font><span id="BelectricId">000</span>A</font>
+							</div>
+							<p class="power-charts-title">B相电流</p>
+						</div>
+						<div class="power-charts-info">
+							<div class="power-charts-desc">
+								<font><span id="CelectricId">000</span>A</font>
+							</div>
+							<p class="power-charts-title">C相电流</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="water-desc floatr">
+				<div class="water-content">
+					<div class="water-content-top">漏水状态</div>
+					<div class="water-content-bottom color-normal" id="waterStausId">正常</div>
+				</div>
+			</div>
+			
+			<div class="report-desc floatr">
+				<div class="report-desc-content floatl">
+					<p class="model-title">错误</p>
+					<div class="report-desc-left-info">
+						<span id="errorNumId">0</span>
+					</div>
+				</div>
+				<div class="report-desc-content floatr">
+					<p class="model-title">报警</p>
+					<div class="report-desc-right-info">
+						<span id="warnNumId">-</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ring.js" type="text/javascript" charset="utf-8"></script>
+		
+	</body>
+</html>
